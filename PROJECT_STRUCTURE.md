@@ -3,7 +3,7 @@
 Complete file structure for the Viks Animation library.
 
 ```
-viks-animation/
+viks-a/
 │
 ├── 📁 src/                          # Source files
 │   ├── viks-animation.js            # Main JavaScript file
