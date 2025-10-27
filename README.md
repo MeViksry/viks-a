@@ -231,16 +231,9 @@ yarn add viks-a --save
 <h2 align="center">🚀 INITIALIZATION</h2>
 
 ```javascript
-// VIKS SCROLL ANIMATION
+<script>
 VIKS.init()
-
-// VIKS NUMBER ANIMATION
-VIKSNumber.init();
-
-// VIKS 3D ANIMATION
-const viks3D = new Viks3D(); 
-viks3D.addShadow();
-viks3D.addParallax(20);
+</script>
 ```
 
 <details>
