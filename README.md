@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>VIKS ANIMATION</h1>
+  <h1>VIKS ANIMATION JS</h1>
   
   <p>
     <img src="https://img.shields.io/badge/JavaScript-Library-667eea?style=for-the-badge&logoColor=white" alt="JavaScript Library Badge"/>
