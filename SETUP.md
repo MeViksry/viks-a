@@ -1,6 +1,6 @@
 # 🚀 VIKS Animation - Complete Setup Guide
 
-[![Build Status](https://img.shields.io/badge/Build-Webpack_5-00FFFF?style=for-the-badge&logo=webpack&logoColor=000000&labelColor=2C2C2C)](#webpack-configuration)
+[![Build Status](https://img.shields.io/badge/Build-Webpack_5-white?style=for-the-badge&logo=webpack&logoColor=white&labelColor=2C2C2C)](#webpack-configuration)
 [![Node Version](https://img.shields.io/badge/Node-18+-40E0D0?style=for-the-badge&logo=node.js&logoColor=000000&labelColor=2C2C2C)](#requirements)
 [![Package Manager](https://img.shields.io/badge/NPM-10+-00CED1?style=for-the-badge&logo=npm&logoColor=000000&labelColor=2C2C2C)](#quick-setup)
 [![License](https://img.shields.io/badge/License-MIT-20B2AA?style=for-the-badge&logoColor=000000&labelColor=2C2C2C)](#)
