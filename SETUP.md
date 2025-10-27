@@ -1393,22 +1393,22 @@ cat webpack-stats.json | jq '.modules'
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="dist/css/viks.min.css">
+  <link rel="stylesheet" href="viks-animation/dist/css/viks.min.css">
 </head>
 <body>
-  <div class="viks-container">
-    <h1 class="viks-animate">Hello VIKS!</h1>
-  </div>
+  <div data-viks="fade-up">Elements to be animated</div>
   
-  <script src="dist/js/viks.min.js"></script>
+  <script src="viks-animation/dist/js/viks.min.js"></script>
   <script>
     // Initialize
-    const viks = new VIKS({
-      selector: '.viks-animate',
-      duration: 1000
-    });
+    VIKS.init();
     
-    viks.init();
+    // Atau dengan custom options
+    VIKS.init({
+      offset: 100,
+      duration: 1000,
+      easing: 'ease-in-out'
+    });
   </script>
 </body>
 </html>
@@ -1440,15 +1440,21 @@ npm install viks-animation
 import VIKS from 'viks-animation';
 import 'viks-animation/dist/css/viks.min.css';
 
-// CommonJS
+// CommonJS  
 const VIKS = require('viks-animation');
 require('viks-animation/dist/css/viks.min.css');
 
-// Usage
-const viks = new VIKS({
-  selector: '.animate',
-  duration: 800
+// Correct usage
+VIKS.init({
+  offset: 120,
+  duration: 800,
+  easing: 'ease',
+  once: false,
+  mirror: false
 });
+
+// Or use the default options
+VIKS.init();
 ```
 
 ### 🎨 Example 4: Custom Build
