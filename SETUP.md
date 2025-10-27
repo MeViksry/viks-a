@@ -46,50 +46,46 @@ git --version    # Should be 2.x or higher
 
 ```
 viks-animation/
-├── 📂 .github/
-│   └── 📂 workflows/
-│       ├── 📄 build-and-release.yml    # Automated releases
-│       └── 📄 ci.yml                   # CI pipeline
-│
-├── 📂 dist/                            # 🎯 Build output
-│   ├── 📂 css/
-│   │   ├── 📄 viks.css                # Expanded CSS
-│   │   ├── 📄 viks.css.map            # CSS source map
-│   │   ├── 📄 viks.min.css            # Minified CSS
-│   │   └── 📄 viks.min.css.map        # Minified CSS map
-│   │
-│   └── 📂 js/
-│       ├── 📄 viks.js                 # Expanded JS (UMD)
-│       ├── 📄 viks.js.map             # JS source map
-│       ├── 📄 viks.min.js             # Minified JS
-│       ├── 📄 viks.min.js.map         # Minified JS map
-│       ├── 📄 viks-css.js             # CSS entry artifact
-│       ├── 📄 viks-css.js.map         # CSS entry map
-│       ├── 📄 viks-css.min.js         # CSS entry minified
-│       └── 📄 viks-css.min.js.map     # CSS entry min map
-│
-├── 📂 src/                             # 📝 Source files
-│   ├── 📂 js/
-│   │   └── 📄 viks-animation.js       # Main JavaScript
-│   │
-│   └── 📂 sass/
-│       └── 📄 viks-animation.scss     # Main SCSS
-│
-├── 📂 node_modules/                    # Dependencies
-│
-├── 📄 .eslintrc.json                   # ESLint config
-├── 📄 .gitignore                       # Git ignore rules
-├── 📄 .stylelintrc.json                # Stylelint config
-├── 📄 babel.config.js                  # Babel transpiler config
-├── 📄 eslint.config.js                 # ESLint flat config
-├── 📄 eslint.config.mjs                # ESLint ESM config
-├── 📄 Makefile                         # Build automation
-├── 📄 package.json                     # NPM dependencies
-├── 📄 package-lock.json                # Locked dependencies
-├── 📄 postcss.config.js                # PostCSS config
-├── 📄 webpack.config.js                # Webpack bundler config
-├── 📄 stats.html                       # Bundle analysis
-└── 📄 SETUP.md                         # This file
+├── 📁 .github/
+│   └── 📁 workflows/
+│       ├── 🔧 build-and-release.yml
+│       └── 🔧 ci.yml
+├── 📁 dist/
+│   ├── 📁 css/
+│   │   ├── 🎨 viks.css
+│   │   ├── 🗺️ viks.css.map
+│   │   ├── 🎨 viks.min.css
+│   │   └── 🗺️ viks.min.css.map
+│   └── 📁 js/
+│       ├── ⚡ viks-css.js
+│       ├── 🗺️ viks-css.js.map
+│       ├── ⚡ viks-css.min.js
+│       ├── 🗺️ viks-css.min.js.map
+│       ├── ⚡ viks.js
+│       ├── 🗺️ viks.js.map
+│       ├── ⚡ viks.min.js
+│       └── 🗺️ viks.min.js.map
+├── 📁 node_modules/
+├── 📁 src/
+│   ├── 📁 js/
+│   │   └── ⚡ viks-animation.js
+│   └── 📁 sass/
+│       └── 🎨 viks-animation.scss
+├── 📄 .eslintrc.json
+├── 📄 .gitignore
+├── 📄 .stylelintrc.json
+├── 📄 babel.config.js
+├── 📄 eslint.config.js
+├── 📄 eslint.config.mjs
+├── 📄 Makefile
+├── 📄 package-lock.json
+├── 📄 package.json
+├── 📄 postcss.config.js
+├── 📄 SETUP.md
+├── 📄 stats.html
+├── 📄 webpack.config.js
+├── 📖 README.md
+└── 🤝 CONTRIBUTING.md
 ```
 
 ### 📦 Output Files Explained
