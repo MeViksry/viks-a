@@ -558,7 +558,7 @@ browsers: ['last 2 iOS versions', 'last 2 Android versions']
 
 ## 🤖 GitHub Actions Setup
 
-![GitHub Actions](https://img.shields.io/badge/CI/CD-Automated-00FFFF?style=flat-square&logo=github-actions&logoColor=000000&labelColor=2C2C2C)
+![GitHub Actions](https://img.shields.io/badge/CI/CD-Automated-aqua?style=flat-square&logo=github-actions&logoColor=white&labelColor=2C2C2C)
 
 ### 📋 Step 1: Enable Actions
 
