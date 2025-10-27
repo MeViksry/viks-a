@@ -29,9 +29,9 @@
 
 ## 📋 Requirements
 
-![Node](https://img.shields.io/badge/Node.js-18.x_or_higher-00FFFF?style=flat-square&logo=node.js&logoColor=000000&labelColor=2C2C2C)
-![NPM](https://img.shields.io/badge/NPM-10.x_or_higher-40E0D0?style=flat-square&logo=npm&logoColor=000000&labelColor=2C2C2C)
-![Git](https://img.shields.io/badge/Git-2.x_or_higher-00CED1?style=flat-square&logo=git&logoColor=000000&labelColor=2C2C2C)
+![Node](https://img.shields.io/badge/Node.js-18.x_or_higher-aqua?style=flat-square&logo=node.js&logoColor=white&labelColor=2C2C2C)
+![NPM](https://img.shields.io/badge/NPM-10.x_or_higher-aqua?style=flat-square&logo=npm&logoColor=white&labelColor=2C2C2C)
+![Git](https://img.shields.io/badge/Git-2.x_or_higher-aqua?style=flat-square&logo=git&logoColor=white&labelColor=2C2C2C)
 
 ```bash
 # Check your versions
