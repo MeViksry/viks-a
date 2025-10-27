@@ -1,13 +1,13 @@
 # 🚀 VIKS Animation - Complete Setup Guide
 
-[![Build Status](https://img.shields.io/badge/Build-Webpack_5-00FFFF?style=for-the-badge&logo=webpack&logoColor=black)](#webpack-configuration)
-[![Node Version](https://img.shields.io/badge/Node-18+-40E0D0?style=for-the-badge&logo=node.js&logoColor=black)](#requirements)
-[![Package Manager](https://img.shields.io/badge/NPM-10+-00CED1?style=for-the-badge&logo=npm&logoColor=black)](#quick-setup)
-[![License](https://img.shields.io/badge/License-MIT-20B2AA?style=for-the-badge)](#)
+[![Build Status](https://img.shields.io/badge/Build-Webpack_5-00FFFF?style=for-the-badge&logo=webpack&logoColor=000000&labelColor=2C2C2C)](#webpack-configuration)
+[![Node Version](https://img.shields.io/badge/Node-18+-40E0D0?style=for-the-badge&logo=node.js&logoColor=000000&labelColor=2C2C2C)](#requirements)
+[![Package Manager](https://img.shields.io/badge/NPM-10+-00CED1?style=for-the-badge&logo=npm&logoColor=000000&labelColor=2C2C2C)](#quick-setup)
+[![License](https://img.shields.io/badge/License-MIT-20B2AA?style=for-the-badge&logoColor=000000&labelColor=2C2C2C)](#)
 
-[![Automation](https://img.shields.io/badge/CI/CD-GitHub_Actions-00FFFF?style=for-the-badge&logo=github-actions&logoColor=black)](#github-actions-setup)
-[![Code Quality](https://img.shields.io/badge/Linting-ESLint_+_Stylelint-40E0D0?style=for-the-badge&logo=eslint&logoColor=black)](#linting)
-[![Build Tool](https://img.shields.io/badge/Build-Make-00CED1?style=for-the-badge&logo=gnu&logoColor=black)](#using-makefile)
+[![Automation](https://img.shields.io/badge/CI/CD-GitHub_Actions-00FFFF?style=for-the-badge&logo=github-actions&logoColor=000000&labelColor=2C2C2C)](#github-actions-setup)
+[![Code Quality](https://img.shields.io/badge/Linting-ESLint_+_Stylelint-40E0D0?style=for-the-badge&logo=eslint&logoColor=000000&labelColor=2C2C2C)](#linting)
+[![Build Tool](https://img.shields.io/badge/Build-Make-00CED1?style=for-the-badge&logo=gnu&logoColor=000000&labelColor=2C2C2C)](#using-makefile)
 
 ---
 
@@ -30,9 +30,9 @@
 
 ## 📋 Requirements
 
-![Node](https://img.shields.io/badge/Node.js-18.x_or_higher-00FFFF?style=flat-square&logo=node.js&logoColor=black)
-![NPM](https://img.shields.io/badge/NPM-10.x_or_higher-40E0D0?style=flat-square&logo=npm&logoColor=black)
-![Git](https://img.shields.io/badge/Git-2.x_or_higher-00CED1?style=flat-square&logo=git&logoColor=black)
+![Node](https://img.shields.io/badge/Node.js-18.x_or_higher-00FFFF?style=flat-square&logo=node.js&logoColor=000000&labelColor=2C2C2C)
+![NPM](https://img.shields.io/badge/NPM-10.x_or_higher-40E0D0?style=flat-square&logo=npm&logoColor=000000&labelColor=2C2C2C)
+![Git](https://img.shields.io/badge/Git-2.x_or_higher-00CED1?style=flat-square&logo=git&logoColor=000000&labelColor=2C2C2C)
 
 ```bash
 # Check your versions
@@ -210,7 +210,7 @@ npm run serve
 
 ## 🛠️ Using Makefile
 
-![Make](https://img.shields.io/badge/GNU_Make-Automation-00FFFF?style=flat-square&logo=gnu&logoColor=black)
+![Make](https://img.shields.io/badge/GNU_Make-Automation-00FFFF?style=flat-square&logo=gnu&logoColor=000000&labelColor=2C2C2C)
 
 The Makefile provides convenient shortcuts for common tasks.
 
@@ -326,7 +326,7 @@ make release
 
 ## 📦 NPM Scripts
 
-![NPM](https://img.shields.io/badge/NPM_Scripts-Available-40E0D0?style=flat-square&logo=npm&logoColor=black)
+![NPM](https://img.shields.io/badge/NPM_Scripts-Available-40E0D0?style=flat-square&logo=npm&logoColor=000000&labelColor=2C2C2C)
 
 ### 🏗️ Building
 
@@ -559,7 +559,7 @@ browsers: ['last 2 iOS versions', 'last 2 Android versions']
 
 ## 🤖 GitHub Actions Setup
 
-![GitHub Actions](https://img.shields.io/badge/CI/CD-Automated-00FFFF?style=flat-square&logo=github-actions&logoColor=black)
+![GitHub Actions](https://img.shields.io/badge/CI/CD-Automated-00FFFF?style=flat-square&logo=github-actions&logoColor=000000&labelColor=2C2C2C)
 
 ### 📋 Step 1: Enable Actions
 
@@ -629,7 +629,7 @@ https://YOUR_USERNAME.github.io/viks-animation/css/viks.min.css
 
 ## 🏷️ Creating Releases
 
-![Release](https://img.shields.io/badge/Releases-Automated-40E0D0?style=flat-square&logo=github&logoColor=black)
+![Release](https://img.shields.io/badge/Releases-Automated-40E0D0?style=flat-square&logo=github&logoColor=000000&labelColor=2C2C2C)
 
 ### 🤖 Automatic Release (Recommended)
 
@@ -703,7 +703,7 @@ Before creating a release:
 
 ## 🔧 Troubleshooting
 
-![Debug](https://img.shields.io/badge/Debug-Solutions-00CED1?style=flat-square&logo=bug&logoColor=black)
+![Debug](https://img.shields.io/badge/Debug-Solutions-00CED1?style=flat-square&logo=bug&logoColor=000000&labelColor=2C2C2C)
 
 ### ❌ Problem: npm install fails
 
@@ -858,7 +858,7 @@ npx webpack --version
 
 ## 📊 Monitoring
 
-![Analytics](https://img.shields.io/badge/Analytics-Enabled-20B2AA?style=flat-square&logo=chartdotjs&logoColor=black)
+![Analytics](https://img.shields.io/badge/Analytics-Enabled-20B2AA?style=flat-square&logo=chartdotjs&logoColor=000000&labelColor=2C2C2C)
 
 ### 🔍 Check Build Status
 
@@ -948,7 +948,7 @@ Add to `.github/workflows/ci.yml`:
 
 ## 🎯 Best Practices
 
-![Best Practices](https://img.shields.io/badge/Best_Practices-Follow-00FFFF?style=flat-square&logo=checkmarx&logoColor=black)
+![Best Practices](https://img.shields.io/badge/Best_Practices-Follow-00FFFF?style=flat-square&logo=checkmarx&logoColor=000000&labelColor=2C2C2C)
 
 ### 📝 Before Every Commit
 
@@ -1058,7 +1058,7 @@ echo ".DS_Store" >> .gitignore
 
 ## ✅ Production Checklist
 
-![Production](https://img.shields.io/badge/Production-Ready-40E0D0?style=flat-square&logo=rocket&logoColor=black)
+![Production](https://img.shields.io/badge/Production-Ready-40E0D0?style=flat-square&logo=rocket&logoColor=000000&labelColor=2C2C2C)
 
 Before deploying to production, verify:
 
@@ -1328,7 +1328,7 @@ export default class VIKS {
 
 ## 🐛 Debugging Guide
 
-![Debug](https://img.shields.io/badge/Debugging-Tips-00FFFF?style=flat-square&logo=debug&logoColor=black)
+![Debug](https://img.shields.io/badge/Debugging-Tips-00FFFF?style=flat-square&logo=debug&logoColor=000000&labelColor=2C2C2C)
 
 ### 🔍 Webpack Debug Mode
 
@@ -1574,7 +1574,7 @@ echo "⚠️  Check dist/ for new output"
 
 ## 🤝 Contributing Guide
 
-![Contributors](https://img.shields.io/badge/Contributors-Welcome-40E0D0?style=flat-square&logo=handshake&logoColor=black)
+![Contributors](https://img.shields.io/badge/Contributors-Welcome-40E0D0?style=flat-square&logo=handshake&logoColor=000000&labelColor=2C2C2C)
 
 ### 🍴 Fork & Clone
 
@@ -1656,7 +1656,7 @@ Before submitting PR:
 
 ## 📞 Getting Help
 
-![Support](https://img.shields.io/badge/Support-Available-00CED1?style=flat-square&logo=lifebuoy&logoColor=black)
+![Support](https://img.shields.io/badge/Support-Available-00CED1?style=flat-square&logo=lifebuoy&logoColor=000000&labelColor=2C2C2C)
 
 ### 🐛 Found a Bug?
 
