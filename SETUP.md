@@ -209,7 +209,7 @@ npm run serve
 
 ## 🛠️ Using Makefile
 
-![Make](https://img.shields.io/badge/GNU_Make-Automation-00FFFF?style=flat-square&logo=gnu&logoColor=000000&labelColor=2C2C2C)
+![Make](https://img.shields.io/badge/GNU_Make-Automation-aqua?style=flat-square&logo=gnu&logoColor=white&labelColor=2C2C2C)
 
 The Makefile provides convenient shortcuts for common tasks.
 
@@ -325,7 +325,7 @@ make release
 
 ## 📦 NPM Scripts
 
-![NPM](https://img.shields.io/badge/NPM_Scripts-Available-40E0D0?style=flat-square&logo=npm&logoColor=000000&labelColor=2C2C2C)
+![NPM](https://img.shields.io/badge/NPM_Scripts-Available-aqua?style=flat-square&logo=npm&logoColor=white&labelColor=2C2C2C)
 
 ### 🏗️ Building
 
