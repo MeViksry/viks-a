@@ -628,7 +628,7 @@ https://YOUR_USERNAME.github.io/viks-animation/css/viks.min.css
 
 ## 🏷️ Creating Releases
 
-![Release](https://img.shields.io/badge/Releases-Automated-40E0D0?style=flat-square&logo=github&logoColor=000000&labelColor=2C2C2C)
+![Release](https://img.shields.io/badge/Releases-Automated-aqua?style=flat-square&logo=github&logoColor=white&labelColor=2C2C2C)
 
 ### 🤖 Automatic Release (Recommended)
 
@@ -702,7 +702,7 @@ Before creating a release:
 
 ## 🔧 Troubleshooting
 
-![Debug](https://img.shields.io/badge/Debug-Solutions-00CED1?style=flat-square&logo=bug&logoColor=000000&labelColor=2C2C2C)
+![Debug](https://img.shields.io/badge/Debug-Solutions-aqua?style=flat-square&logo=bug&logoColor=white&labelColor=2C2C2C)
 
 ### ❌ Problem: npm install fails
 
@@ -857,7 +857,7 @@ npx webpack --version
 
 ## 📊 Monitoring
 
-![Analytics](https://img.shields.io/badge/Analytics-Enabled-20B2AA?style=flat-square&logo=chartdotjs&logoColor=000000&labelColor=2C2C2C)
+![Analytics](https://img.shields.io/badge/Analytics-Enabled-aqua?style=flat-square&logo=chartdotjs&logoColor=white&labelColor=2C2C2C)
 
 ### 🔍 Check Build Status
 
@@ -947,7 +947,7 @@ Add to `.github/workflows/ci.yml`:
 
 ## 🎯 Best Practices
 
-![Best Practices](https://img.shields.io/badge/Best_Practices-Follow-00FFFF?style=flat-square&logo=checkmarx&logoColor=000000&labelColor=2C2C2C)
+![Best Practices](https://img.shields.io/badge/Best_Practices-Follow-aqua?style=flat-square&logo=checkmarx&logoColor=white&labelColor=2C2C2C)
 
 ### 📝 Before Every Commit
 
@@ -1057,7 +1057,7 @@ echo ".DS_Store" >> .gitignore
 
 ## ✅ Production Checklist
 
-![Production](https://img.shields.io/badge/Production-Ready-40E0D0?style=flat-square&logo=rocket&logoColor=000000&labelColor=2C2C2C)
+![Production](https://img.shields.io/badge/Production-Ready-aqua?style=flat-square&logo=rocket&logoColor=white&labelColor=2C2C2C)
 
 Before deploying to production, verify:
 
@@ -1327,7 +1327,7 @@ export default class VIKS {
 
 ## 🐛 Debugging Guide
 
-![Debug](https://img.shields.io/badge/Debugging-Tips-00FFFF?style=flat-square&logo=debug&logoColor=000000&labelColor=2C2C2C)
+![Debug](https://img.shields.io/badge/Debugging-Tips-aqua?style=flat-square&logo=debug&logoColor=white&labelColor=2C2C2C)
 
 ### 🔍 Webpack Debug Mode
 
@@ -1573,7 +1573,7 @@ echo "⚠️  Check dist/ for new output"
 
 ## 🤝 Contributing Guide
 
-![Contributors](https://img.shields.io/badge/Contributors-Welcome-40E0D0?style=flat-square&logo=handshake&logoColor=000000&labelColor=2C2C2C)
+![Contributors](https://img.shields.io/badge/Contributors-Welcome-4aqua?style=flat-square&logo=handshake&logoColor=white&labelColor=2C2C2C)
 
 ### 🍴 Fork & Clone
 
@@ -1655,7 +1655,7 @@ Before submitting PR:
 
 ## 📞 Getting Help
 
-![Support](https://img.shields.io/badge/Support-Available-00CED1?style=flat-square&logo=lifebuoy&logoColor=000000&labelColor=2C2C2C)
+![Support](https://img.shields.io/badge/Support-Available-aqua?style=flat-square&logo=lifebuoy&logoColor=white&labelColor=2C2C2C)
 
 ### 🐛 Found a Bug?
 
