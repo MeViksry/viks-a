@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>VIKS ANIMATION JS</h1>
+  <h1>VIKS ANIMATIONS JS</h1>
   
   <p>
     <img src="https://img.shields.io/badge/JavaScript-Library-aqua?style=for-the-badge&logoColor=black" alt="JavaScript Library Badge"/>
@@ -30,7 +30,7 @@
 
 ## 🌟 What is VIKS Animation?
 
-VIKS Animation is a modern animation library designed to make websites and applications more dynamic with minimal effort. It is beginner-friendly and suitable for professionals, offering both basic and advanced configuration options to cater to diverse animation needs.
+VIKS Animations is a modern animation library designed to make websites and applications more dynamic with minimal effort. It is beginner-friendly and suitable for professionals, offering both basic and advanced configuration options to cater to diverse animation needs.
 
 <div align="center">
   <table>
