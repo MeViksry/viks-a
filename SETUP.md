@@ -46,46 +46,51 @@ git --version    # Should be 2.x or higher
 
 ```
 viks-animation/
-├── 📁 .github/
-│   └── 📁 workflows/
-│       ├── 🔧 build-and-release.yml
-│       └── 🔧 ci.yml
-├── 📁 dist/
-│   ├── 📁 css/
-│   │   ├── 🎨 viks.css
-│   │   ├── 🗺️ viks.css.map
-│   │   ├── 🎨 viks.min.css
-│   │   └── 🗺️ viks.min.css.map
-│   └── 📁 js/
-│       ├── ⚡ viks-css.js
-│       ├── 🗺️ viks-css.js.map
-│       ├── ⚡ viks-css.min.js
-│       ├── 🗺️ viks-css.min.js.map
-│       ├── ⚡ viks.js
-│       ├── 🗺️ viks.js.map
-│       ├── ⚡ viks.min.js
-│       └── 🗺️ viks.min.js.map
-├── 📁 node_modules/
-├── 📁 src/
-│   ├── 📁 js/
-│   │   └── ⚡ viks-animation.js
-│   └── 📁 sass/
-│       └── 🎨 viks-animation.scss
-├── 📄 .eslintrc.json
-├── 📄 .gitignore
-├── 📄 .stylelintrc.json
-├── 📄 babel.config.js
-├── 📄 eslint.config.js
-├── 📄 eslint.config.mjs
-├── 📄 Makefile
-├── 📄 package-lock.json
-├── 📄 package.json
-├── 📄 postcss.config.js
-├── 📄 SETUP.md
-├── 📄 stats.html
-├── 📄 webpack.config.js
-├── 📖 README.md
-└── 🤝 CONTRIBUTING.md
+├── 📁 .github/                           # GitHub configuration files
+│   └── 📁 workflows/                     # GitHub automation workflows
+│       ├── 🔧 build-and-release.yml      # Build and release pipeline
+│       └── 🔧 ci.yml                     # Continuous integration pipeline
+├── 📁 dist/                              # Distribution files (built assets)
+│   ├── 📁 css/                           # Compiled CSS files
+│   │   ├── 🎨 viks.css                   # Development CSS (unminified)
+│   │   ├── 🗺️ viks.css.map               # Source map for development CSS
+│   │   ├── 🎨 viks.min.css               # Production CSS (minified)
+│   │   └── 🗺️ viks.min.css.map           # Source map for production CSS
+│   └── 📁 js/                            # Compiled JavaScript files
+│       ├── ⚡ viks-css.js                 # CSS utilities JavaScript
+│       ├── 🗺️ viks-css.js.map            # Source map for viks-css.js
+│       ├── ⚡ viks-css.min.js             # Minified viks-css.js
+│       ├── 🗺️ viks-css.min.js.map        # Source map for minified version
+│       ├── ⚡ viks.js                     # Main JavaScript library
+│       ├── 🗺️ viks.js.map                # Source map for viks.js
+│       ├── ⚡ viks.min.js                 # Minified viks.js
+│       └── 🗺️ viks.min.js.map            # Source map for minified version
+├── 📁 node_modules/                      # npm dependencies (auto-generated)
+├── 📁 scripts/                           # Custom utility scripts
+│   └── 🔧 format-viks-css.js             # Script for formatting CSS
+├── 📁 src/                               # Source code directory
+│   ├── 📁 js/                            # JavaScript source files
+│   │   └── ⚡ viks-animation.js           # Main animation library source
+│   └── 📁 sass/                          # Sass/SCSS source files
+│       └── 🎨 viks-animation.scss         # Main Sass stylesheet source
+├── 📄 .eslintrc.json                     # ESLint configuration (legacy)
+├── 📄 .gitignore                         # Git ignore patterns
+├── 📄 .prettierignore                    # Prettier ignore patterns
+├── 📄 .prettierrc.json                   # Prettier code formatter config
+├── 📄 .stylelintrc.json                  # Stylelint CSS/SCSS linting config
+├── 📄 babel.config.js                    # Babel transpiler configuration
+├── 📄 eslint.config.js                   # ESLint configuration (modern)
+├── 📄 eslint.config.mjs                  # ESLint ES6 module configuration
+├── 📄 jest.config.js                     # Jest testing framework configuration
+├── 📄 Makefile                           # Automation tasks using Make
+├── 📄 package-lock.json                  # Locked npm dependencies versions
+├── 📄 package.json                       # npm dependencies and scripts
+├── 📄 postcss.config.js                  # PostCSS processor configuration
+├── 📄 SETUP.md                           # Project setup documentation
+├── 📄 stats.html                         # Build statistics (auto-generated)
+├── 📄 webpack.config.js                  # Webpack module bundler configuration
+├── 📖 README.md                          # Main project documentation
+└── 🤝 CONTRIBUTING.md                    # Contribution guidelines for developers
 ```
 
 ### 📦 Output Files Explained
