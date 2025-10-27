@@ -1573,7 +1573,7 @@ echo "⚠️  Check dist/ for new output"
 
 ## 🤝 Contributing Guide
 
-![Contributors](https://img.shields.io/badge/Contributors-Welcome-4aqua?style=flat-square&logo=handshake&logoColor=white&labelColor=2C2C2C)
+![Contributors](https://img.shields.io/badge/Contributors-Welcome-4aqua?style=aqua-square&logo=handshake&logoColor=white&labelColor=2C2C2C)
 
 ### 🍴 Fork & Clone
 
