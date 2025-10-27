@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Code Style](https://img.shields.io/badge/Code_Style-Prettier-00FFFF?style=for-the-badge&logoColor=black)](#code-style)
-[![Commit Style](https://img.shields.io/badge/Commits-Conventional-40E0D0?style=for-the-badge&logoColor=black)](#commit-guidelines)
+[![Commit Style](https://img.shields.io/badge/Commits-Conventional-black?style=for-the-badge&logoColor=black)](#commit-guidelines)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-00FFFF?style=for-the-badge&logoColor=black)](#submitting-pull-requests)
 
 </div>
