@@ -1327,7 +1327,7 @@ export default class VIKS {
 
 ## 🐛 Debugging Guide
 
-![Debug](https://img.shields.io/badge/Debugging-Tips-aqua?style=flat-square&logo=debug&logoColor=white&labelColor=2C2C2C)
+![Debug](https://img.shields.io/badge/Debugging-Tips-aqua?style=aqua-square&logo=debug&logoColor=white&labelColor=2C2C2C)
 
 ### 🔍 Webpack Debug Mode
 
