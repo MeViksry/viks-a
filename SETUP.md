@@ -4,9 +4,8 @@
 [![Node Version](https://img.shields.io/badge/Node-18+-aqua?style=for-the-badge&logo=node.js&logoColor=white&labelColor=2C2C2C)](#requirements)
 [![Package Manager](https://img.shields.io/badge/NPM-10+-aqua?style=for-the-badge&logo=npm&logoColor=white&labelColor=2C2C2C)](#quick-setup)
 [![License](https://img.shields.io/badge/License-MIT-20B2AA?style=for-the-badge&logoColor=000000&labelColor=2C2C2C)](#)
-
 [![Automation](https://img.shields.io/badge/CI/CD-GitHub_Actions-aqua?style=for-the-badge&logo=github-actions&logoColor=white&labelColor=2C2C2C)](#github-actions-setup)
-[![Code Quality](https://img.shields.io/badge/Linting-ESLint_+_Stylelint-40E0D0?style=for-the-badge&logo=eslint&logoColor=000000&labelColor=2C2C2C)](#linting)
+[![Code Quality](https://img.shields.io/badge/Linting-ESLint_+_Stylelint-aqua?style=for-the-badge&logo=eslint&logoColor=white&labelColor=2C2C2C)](#linting)
 [![Build Tool](https://img.shields.io/badge/Build-Make-00CED1?style=for-the-badge&logo=gnu&logoColor=000000&labelColor=2C2C2C)](#using-makefile)
 
 ---
