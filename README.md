@@ -14,12 +14,14 @@
     <img src="https://img.shields.io/badge/Opera-Latest-aqua?style=flat-square&logo=opera&logoColor=white"/>
   </p>
 
+<p>
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
       <img src="https://img.shields.io/badge/LICENSE-MIT-black?style=flat-square" alt="License Badge">
     </a>
     <a href="https://www.npmjs.com/package/viks-a" target="_blank">
       <img src="https://img.shields.io/badge/DOWNLOAD-1K%2FMONTH-aqua?style=flat-square" alt="Downloads Badge">
     </a>
+</p>
 
   <h3>✨ Lightweight JavaScript library for smooth and engaging scroll animations ✨</h3>
 </div>
