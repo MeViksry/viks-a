@@ -52,10 +52,7 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 - **🛠️ Developer Friendly** - TypeScript support, comprehensive API, event callbacks
 - **🔧 Auto-Refresh** - MutationObserver support for dynamic content
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
+
         <h3>🎯 Core Features</h3>
         <ul style="text-align: left;">
           <li>✅ Scroll-Triggered Animations</li>
@@ -93,10 +90,6 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
           <li>🎭 Parallax Effects</li>
           <li>🎭 Infinite Possibilities</li>
         </ul>
-      </td>
-    </tr>
-  </table>
-</div>
 
 <div align="center">
   <p>
