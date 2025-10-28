@@ -183,10 +183,10 @@ npm install viks-animation --save
 import 'viks-animation/dist/css/viks.min.css';
 
 // Import JS
-import viks from 'viks-animation';
+import VIKS from 'viks-animation';
 
 // Initialize
-viks.init();
+VIKS.init();
 ```
 
 ### Yarn Installation
