@@ -7,6 +7,13 @@
   </p>
 
   <p>
+    <img src="https://img.shields.io/npm/v/viks-animation?style=flat-square&color=aqua"/>
+    <img src="https://img.shields.io/npm/dm/viks-animation?style=flat-square&color=black"/>
+    <img src="https://img.shields.io/bundlephobia/minzip/viks-animation?style=flat-square&color=aqua"/>
+    <img src="https://img.shields.io/github/license/MeViksry/viks-animation?style=flat-square&color=black"/>
+  </p>
+
+  <p>
     <img src="https://img.shields.io/badge/Chrome-Latest-aqua?style=flat-square&logo=google-chrome&logoColor=white"/>
     <img src="https://img.shields.io/badge/Firefox-Latest-aqua?style=flat-square&logo=firefox&logoColor=white"/>
     <img src="https://img.shields.io/badge/Safari-Latest-aqua?style=flat-square&logo=safari&logoColor=white"/>
@@ -18,51 +25,51 @@
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
       <img src="https://img.shields.io/badge/LICENSE-MIT-black?style=flat-square" alt="License Badge">
     </a>
-    <a href="https://www.npmjs.com/package/viks-a" target="_blank">
+    <a href="https://www.npmjs.com/package/viks-animation" target="_blank">
       <img src="https://img.shields.io/badge/DOWNLOAD-1K%2FMONTH-aqua?style=flat-square" alt="Downloads Badge">
     </a>
 </p>
 
-  <h3>✨ Lightweight JavaScript library for smooth and engaging scroll animations ✨</h3>
+  <h3>✨ Lightweight scroll animation library with zero dependencies ✨</h3>
 </div>
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
 ## 🌟 What is VIKS Animation?
 
-VIKS Animation is a modern animation library designed to make websites and applications more dynamic with minimal effort. It is beginner-friendly and suitable for professionals, offering both basic and advanced configuration options to cater to diverse animation needs.
+VIKS Animation is a modern, lightweight JavaScript library for creating smooth scroll-triggered animations. Built with vanilla JavaScript and optimized SCSS, it provides powerful animation capabilities with minimal overhead.
 
 <div align="center">
   <table>
     <tr>
       <td align="center">
         <h3>🎯 Core Features</h3>
-        <ul>
-          <li>Smooth Scroll Animation</li>
-          <li>Number Animation</li>
-          <li>3D Transformations</li>
-          <li>Multiple Easing Functions</li>
-          <li>Cross-Browser Support</li>
+        <ul style="text-align: left;">
+          <li>Scroll-Triggered Animations</li>
+          <li>Inline Attribute System</li>
+          <li>MutationObserver Support</li>
+          <li>Device Detection</li>
+          <li>Anchor-Based Triggers</li>
         </ul>
       </td>
       <td align="center">
         <h3>🛠️ Technical Highlights</h3>
-        <ul>
+        <ul style="text-align: left;">
           <li>Zero Dependencies</li>
           <li>Lightweight (~12KB gzipped)</li>
-          <li>High Performance</li>
-          <li>Mobile-First Design</li>
-          <li>TypeScript Support</li>
+          <li>Built-in Throttle & Debounce</li>
+          <li>IE11 Detection</li>
+          <li>UMD Module Format</li>
         </ul>
       </td>
       <td align="center">
         <h3>🎨 Animation Types</h3>
-        <ul>
-          <li>Fade Effects</li>
-          <li>Slide Animations</li>
-          <li>Scale Transformations</li>
-          <li>3D Rotations</li>
-          <li>Custom Animations</li>
+        <ul style="text-align: left;">
+          <li>Fade (9 variants)</li>
+          <li>Zoom (10 variants)</li>
+          <li>Slide (4 directions)</li>
+          <li>Flip (4 directions)</li>
+          <li>Custom CSS Classes</li>
         </ul>
       </td>
     </tr>
@@ -74,7 +81,7 @@ VIKS Animation is a modern animation library designed to make websites and appli
     <a href="mailto:kingvikvik25@gmail.com">
       <img src="https://img.shields.io/badge/Email-aqua?style=for-the-badge&logo=gmail&logoColor=black" alt="Email">
     </a>
-    <a href="www.linkedin.com/in/MeViksry">
+    <a href="https://www.linkedin.com/in/MeViksry">
       <img src="https://img.shields.io/badge/LinkedIn-black?style=for-the-badge&logo=linkedin&logoColor=aqua" alt="LinkedIn">
     </a>
     <a href="https://www.instagram.com/meviksry">
@@ -99,25 +106,16 @@ VIKS Animation is a modern animation library designed to make websites and appli
 <div align="center">
   <p>
     <a href="#fade-animations">
-      <img src="https://img.shields.io/badge/Fade-Animations-aqua?style=flat-square&logoColor=black" alt="Fade">
+      <img src="https://img.shields.io/badge/Fade-9_Variants-aqua?style=flat-square&logoColor=black" alt="Fade">
     </a>
     <a href="#flip-animations">
-      <img src="https://img.shields.io/badge/Flip-Animations-black?style=flat-square&logoColor=aqua" alt="Flip">
+      <img src="https://img.shields.io/badge/Flip-4_Directions-black?style=flat-square&logoColor=aqua" alt="Flip">
     </a>
     <a href="#slide-animations">
-      <img src="https://img.shields.io/badge/Slide-Animations-aqua?style=flat-square&logoColor=black" alt="Slide">
+      <img src="https://img.shields.io/badge/Slide-4_Directions-aqua?style=flat-square&logoColor=black" alt="Slide">
     </a>
     <a href="#zoom-animations">
-      <img src="https://img.shields.io/badge/Zoom-Animations-black?style=flat-square&logoColor=aqua" alt="Zoom">
-    </a>
-    <a href="#shake-animation">
-      <img src="https://img.shields.io/badge/Shake-Animations-aqua?style=flat-square&logoColor=black" alt="Shake">
-    </a>
-    <a href="#spin-animation">
-      <img src="https://img.shields.io/badge/Spin-Animations-black?style=flat-square&logoColor=aqua" alt="Spin">
-    </a>
-    <a href="#bounce-animation">
-      <img src="https://img.shields.io/badge/Bounce-Animations-aqua?style=flat-square&logoColor=black" alt="Bounce">
+      <img src="https://img.shields.io/badge/Zoom-10_Variants-black?style=flat-square&logoColor=aqua" alt="Zoom">
     </a>
   </p>
 </div>
@@ -140,9 +138,7 @@ VIKS Animation is a modern animation library designed to make websites and appli
   </p>
 </div>
 
-Get started by including production-ready Viks Animation CSS and JavaScript via CDN without any build steps required.
-
-### 1. Create a new file index.html in the root of your project
+### CDN (Recommended)
 
 ```html
 <!doctype html>
@@ -150,428 +146,363 @@ Get started by including production-ready Viks Animation CSS and JavaScript via 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Viks Animation</title>
+    <title>VIKS Animation Demo</title>
+    
+    <!-- VIKS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viks-animation@latest/dist/css/viks.min.css">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1 data-viks="fade-up">Hello, World!</h1>
+    
+    <!-- VIKS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/viks-animation@latest/dist/js/viks.min.js"></script>
+    <script>
+      viks.init();
+    </script>
   </body>
 </html>
 ```
 
-### 2. Include Viks Animation CSS and JS
-
-Place a `<link>` tag inside the `<head>` for our CSS, and a `<script>` tag for our JavaScript bundle before the closing `</body>`.
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Viks Animation demo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viks-a@latest/dist/viks.min.css">
-  </head>
-  <body>
-    <h1 data-viks="fade-up">Hello, world!</h1>
-    <h2 data-viks="fade-down">Hello, world!</h2>
-    <h3 data-viks="fade-right">Hello, world!</h3>
-    <h4 data-viks="fade-left">Hello, world!</h4>
-    <h5 data-viks="zoom-out">Hello, world!</h5>
-    <h6 data-viks="zoom-in">Hello, world!</h6>
-    <script src="https://cdn.jsdelivr.net/npm/viks-a@latest/dist/viks.min.js"></script>
-  </body>
-</html>
-```
-
-### 3. Open the page in your preferred browser to view your Viks Animation page
-
-Now you can start building with Viks Animation by creating your own animations, adding dozens of animations, and taking advantage of our official examples.
-
-### CDN
-
-```html
-<!-- Stylesheet -->
-<link href="https://cdn.jsdelivr.net/npm/viks-a@latest/dist/viks.min.css" rel="stylesheet">
-
-<!-- JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/viks-a@latest/dist/viks.min.js"></script>
-```
-
-### 4. Install via package manager
-
-Install the Viks Animation source Sass and JavaScript files via npm, YARN, or Composer.
+### NPM
 
 ```bash
-# NPM
-npm install viks-a --save
-
-# YARN
-yarn add viks-a --save
+npm install viks-animation --save
 ```
 
-<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+```javascript
+// Import CSS
+import 'viks-animation/dist/css/viks.min.css';
 
-<h2 align="center">📦 MANUAL INSTALLATION</h2>
+// Import JS
+import viks from 'viks-animation';
 
-1. Download the JavaScript and CSS files:
-   - `viks.css`
-   - `viks.js`
+// Initialize
+viks.init();
+```
 
-2. Add them to your HTML as shown below:
+### Yarn
+
+```bash
+yarn add viks-animation
+```
+
+### Manual Installation
+
+1. Download files from [GitHub Releases](https://github.com/MeViksry/viks-animation/releases)
+2. Include in your HTML:
+
 ```html
-<!-- CSS -->
-<link rel="stylesheet" href="path/to/viks.css">
-
-<!-- JAVASCRIPT -->
-<script src="path/to/viks.js"></script>
+<link rel="stylesheet" href="path/to/viks.min.css">
+<script src="path/to/viks.min.js"></script>
 ```
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-<h2 align="center">🚀 INITIALIZATION</h2>
+<h2 align="center">🚀 USAGE</h2>
 
-```javascript
-<script>
-VIKS.init()
-</script>
-```
+### Basic Animation
 
-<details>
-  <summary><b>🔧 Advanced Configuration Options</b></summary>
-
-```javascript
-VIKS.init({
-  thresholdTop: 0.2,         // Set threshold when element appears at the top of the viewport
-  thresholdBottom: 0.2,      // Set threshold when element appears at the bottom of the viewport
-  disable: false,            // Disable animation if set to true
-  startEvent: 'load',        // Wait until the page is fully loaded
-  animatedClassName: 'viks-animate', // Add animation class to animated elements
-  initClassName: 'viks-init', // Class added to initialized elements
-  useClassNames: false,      // Enable or disable the use of CSS classes
-  throttleDelay: 100,        // Set delay time for throttle on scroll
-  debounceDelay: 50,         // Set delay time for debounce on resize
-  offset: 120,               // Add offset distance from the viewport
-  delay: 0,                  // Delay animation after element appears
-  duration: 800,             // Animation duration
-  easing: 'ease-in-out',     // Default easing function
-  once: false,               // Animation runs only once
-  mirror: true,              // Display animation in both directions (mirroring)
-  animateTop: false,         // Turn off all scroll-up animations
-  animateBottom: true        // Enable scroll-down animations
-});
-```
-</details>
-
-<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
-
-<h2 align="center">📝 USAGE</h2>
-
-<h3 align="center">🔄 ON SCROLL ANIMATION</h3>
-
-<table>
-<tr>
-<td>
-
-#### Basic Usage
 ```html
 <div data-viks="fade-up">
-  VIKS CONTENT
+  This will fade up on scroll
 </div>
 ```
 
-</td>
-<td>
+### Inline Configuration (Modern Syntax)
 
-#### Animation Based on Screen Size
+Configure everything in one attribute:
+
+```html
+<!-- Duration, delay, and easing -->
+<div data-viks="fade-up duration-1000 delay-500 ease-out">
+  Fully configured inline
+</div>
+
+<!-- Offset and flags -->
+<div data-viks="zoom-in offset-200 once mirror">
+  Custom offset with flags
+</div>
+
+<!-- Anchor placement -->
+<div data-viks="slide-left top-center">
+  Custom anchor placement
+</div>
+
+<!-- Custom ID for events -->
+<div data-viks="fade-right id-hero">
+  With custom event ID
+</div>
+```
+
+**Inline Options:**
+- `duration-{ms}` - Animation duration (e.g., `duration-1000`)
+- `delay-{ms}` - Delay before animation (e.g., `delay-500`)
+- `offset-{px}` - Trigger offset from viewport (e.g., `offset-200`)
+- `ease-*` - Easing function (e.g., `ease-out`, `ease-in-back`)
+- `anchor-{selector}` - Custom anchor element (e.g., `anchor-#trigger`)
+- `id-{name}` - Custom ID for events (e.g., `id-hero`)
+- `once` - Animate only once
+- `mirror` - Mirror on scroll up
+- Anchor placements: `top-bottom`, `top-center`, `top-top`, `center-bottom`, `center-center`, `center-top`, `bottom-bottom`, `bottom-center`, `bottom-top`
+
+### Separate Attributes (Traditional Syntax)
+
 ```html
 <div data-viks="fade-up"
-     data-viks-desktop="zoom-in"
-     data-viks-tablet="fade-left"
-     data-viks-mobile="fade-down">
-  VIKS CONTENT
+     data-viks-duration="1000"
+     data-viks-delay="500"
+     data-viks-easing="ease-out"
+     data-viks-offset="200"
+     data-viks-once="true"
+     data-viks-mirror="true"
+     data-viks-anchor="#trigger"
+     data-viks-anchor-placement="top-center"
+     data-viks-id="hero">
+  Traditional configuration
 </div>
 ```
 
-</td>
-</tr>
-<tr>
-<td>
+### Advanced Examples
 
-#### Control Delay
+#### Staggered Animations
 ```html
-<!-- Method 1 -->
-<div data-viks="fade-up" data-viks-delay="1000">
-  VIKS CONTENT
-</div>
-
-<!-- Method 2 -->
-<div data-viks="fade-up delay-1000">
-  VIKS CONTENT
-</div>
+<div data-viks="fade-up delay-0">First</div>
+<div data-viks="fade-up delay-100">Second</div>
+<div data-viks="fade-up delay-200">Third</div>
+<div data-viks="fade-up delay-300">Fourth</div>
 ```
 
-</td>
-<td>
-
-#### Control Duration
+#### Custom Anchor Element
 ```html
-<!-- Method 1 -->
-<div data-viks="fade-up" data-viks-duration="2000">
-  2 seconds duration
-</div>
+<div id="trigger-element"></div>
 
-<!-- Method 2 -->
-<div data-viks="fade-up duration-2000">
-  2 seconds duration
+<div data-viks="fade-up anchor-#trigger-element">
+  Animates when #trigger-element scrolls into view
 </div>
 ```
 
-</td>
-</tr>
-<tr>
-<td>
-
-#### Disable Scroll Animations
+#### Anchor Placements
 ```html
-<!-- Disable Scroll Up Animation -->
-<div data-viks="fade-up" data-viks-animation-top="off">
-  No animation on upscroll
-</div>
+<!-- Trigger when element top hits viewport center -->
+<div data-viks="fade-up top-center">Content</div>
 
-<!-- Disable Scroll Down Animation -->
-<div data-viks="fade-up" data-viks-animation-bottom="off">
-  No animation on downscroll
-</div>
+<!-- Trigger when element bottom hits viewport bottom -->
+<div data-viks="zoom-in bottom-bottom">Content</div>
+
+<!-- Trigger when element center hits viewport center -->
+<div data-viks="slide-right center-center">Content</div>
 ```
 
-</td>
-<td>
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-#### Combine Attributes
-```html
-<div data-viks="fade-up delay-1000 duration-2000">
-  Multiple attributes combination
-</div>
-```
+<h2 align="center">⚙️ INITIALIZATION</h2>
 
-</td>
-</tr>
-<tr>
-<td colspan="2">
-
-#### Custom Easing
-```html
-<div data-viks="fade-up" data-viks-easing="ease-out">
-  Ease-out easing
-</div>
-```
-
-<details>
-  <summary><b>Available Easing Functions</b></summary>
-  
-  - `linear`
-  - `ease`
-  - `ease-in`
-  - `ease-out`
-  - `ease-in-out`
-  - `ease-in-back`
-  - `ease-out-back`
-  - `ease-in-out-back`
-  - `ease-in-sine`
-  - `ease-out-sine`
-  - `ease-in-out-sine`
-  - `ease-in-quad`
-  - `ease-out-quad`
-  - `ease-in-out-quad`
-  - `ease-in-cubic`
-  - `ease-out-cubic`
-  - `ease-in-out-cubic`
-  - `ease-in-quart`
-  - `ease-out-quart`
-  - `ease-in-out-quart`
-  - `ease-elastic`
-  - `ease-bounce`
-  - `ease-in-expo`
-  - `ease-out-expo`
-  - `ease-in-out-expo`
-  - `ease-in-circ`
-  - `ease-out-circ`
-  - `ease-in-out-circ`
-</details>
-
-</td>
-</tr>
-</table>
-
-<h3 align="center">🔄 3D ANIMATION</h3>
-
-```html
-<!-- Usage of 3D Animation -->
-<div data-viks="3D">
-    <h2>Examples</h2>
-    <p>Examples</p>
-</div>
-```
-
-<h3 align="center">🔄 NUMBER ANIMATION</h3>
-
-```html
-<!-- Basic Number Animation -->
-<span data-viks="type-nbr duration-1000 fps-120">1000</span>
-<span data-viks="type-nbr">1000</span>
-
-<!-- Combination of FPS, Duration, and Animation Control -->
-<span data-viks="type-nbr duration-2000 fps-60 bottom-off">2000</span>
-```
-
-<h3 align="center">📢 EVENT CALLBACK</h3>
+### Basic Initialization
 
 ```javascript
-// Initialize VIKS and add some callbacks
-VIKS.init({
-  once: false,
-  mirror: true
-})
-.on('beforeInit', (event) => {
-  console.log('VIKS will be initialized at:', event.timestamp);
-})
-.on('afterAnimate', (event) => {
-  console.log('This element has just been animated:', event.element);
-})
-.on('onScroll', (event) => {
-  console.log('Current scroll position:', event.scrollY);
-})
-.on('beforeHide', (event) => {
-    console.log('This element is about to be hidden:', event.element);
+viks.init();
+```
+
+### Advanced Configuration
+
+```javascript
+viks.init({
+  // Trigger offset from viewport (pixels)
+  offset: 120,
+  
+  // Default timing (milliseconds)
+  delay: 0,
+  duration: 400,
+  
+  // Default easing function
+  easing: 'ease',
+  
+  // Animation behavior
+  once: false,              // Animate only once
+  mirror: false,            // Mirror animation on scroll up
+  
+  // Anchor placement
+  anchorPlacement: 'top-bottom',
+  
+  // Start event
+  startEvent: 'DOMContentLoaded',
+  
+  // CSS classes
+  animatedClassName: 'viks-animate',
+  initClassName: 'viks-init',
+  useClassNames: false,
+  
+  // Performance
+  throttleDelay: 99,        // Scroll throttle (ms)
+  debounceDelay: 50,        // Resize debounce (ms)
+  
+  // Features
+  disableMutationObserver: false,
+  
+  // Device-specific disable
+  disable: false            // boolean | 'mobile' | 'phone' | 'tablet' | function
+});
+```
+
+### Device-Specific Disable
+
+```javascript
+// Disable on all mobile devices
+viks.init({
+  disable: 'mobile'
 });
 
-// You can also add and remove callbacks dynamically
+// Disable on phones only
+viks.init({
+  disable: 'phone'
+});
 
-// 1. Store the handler in a variable
-const myScrollHandler = (event) => {
-  console.log('Custom scroll handler:', event.scrollY);
-};
+// Disable on tablets only
+viks.init({
+  disable: 'tablet'
+});
 
-// 2. Add the handler
-VIKS.on('onScroll', myScrollHandler);
-
-// 3. Remove the handler later if no longer needed
-// For example, after 5 seconds
-setTimeout(() => {
-  console.log('Removing myScrollHandler...');
-  VIKS.off('onScroll', myScrollHandler);
-}, 5000);
+// Custom disable logic
+viks.init({
+  disable: function() {
+    return window.innerWidth < 768;
+  }
+});
 ```
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-<h2 align="center">🎭 ANIMATION TYPES</h2>
+<h2 align="center">🎭 ANIMATION REFERENCE</h2>
 
-<div class="animations-container">
-  <div class="animation-group">
-    <h3 id="bounce-animation">Bounce Animation</h3>
-    <ul>
-      <li><code>bounce</code></li>
-      <li><code>bounce-up</code></li>
-      <li><code>bounce-down</code></li>
-      <li><code>bounce-left</code></li>
-      <li><code>bounce-right</code></li>
-    </ul>
-  </div>
+### Fade Animations
+```html
+<div data-viks="fade">Simple fade</div>
+<div data-viks="fade-up">Fade from bottom</div>
+<div data-viks="fade-down">Fade from top</div>
+<div data-viks="fade-left">Fade from right</div>
+<div data-viks="fade-right">Fade from left</div>
+<div data-viks="fade-up-right">Diagonal from bottom-left</div>
+<div data-viks="fade-up-left">Diagonal from bottom-right</div>
+<div data-viks="fade-down-right">Diagonal from top-left</div>
+<div data-viks="fade-down-left">Diagonal from top-right</div>
+```
 
-  <div class="animation-group">
-    <h3 id="fade-animations">Fade Animations</h3>
-    <ul>
-      <li><code>fade</code></li>
-      <li><code>fade-up</code></li>
-      <li><code>fade-down</code></li>
-      <li><code>fade-left</code></li>
-      <li><code>fade-right</code></li>
-      <li><code>fade-up-right</code></li>
-      <li><code>fade-up-left</code></li>
-      <li><code>fade-down-right</code></li>
-      <li><code>fade-down-left</code></li>
-    </ul>
-  </div>
+### Zoom Animations
+```html
+<div data-viks="zoom-in">Scale up from small</div>
+<div data-viks="zoom-in-up">Scale up from bottom</div>
+<div data-viks="zoom-in-down">Scale up from top</div>
+<div data-viks="zoom-in-left">Scale up from right</div>
+<div data-viks="zoom-in-right">Scale up from left</div>
+<div data-viks="zoom-out">Scale down from large</div>
+<div data-viks="zoom-out-up">Scale down from bottom</div>
+<div data-viks="zoom-out-down">Scale down from top</div>
+<div data-viks="zoom-out-left">Scale down from right</div>
+<div data-viks="zoom-out-right">Scale down from left</div>
+```
 
-  <div class="animation-group">
-    <h3 id="flip-animations">Flip Animations</h3>
-    <ul>
-      <li><code>flip-up</code></li>
-      <li><code>flip-down</code></li>
-      <li><code>flip-left</code></li>
-      <li><code>flip-right</code></li>
-    </ul>
-  </div>
+### Slide Animations
+```html
+<div data-viks="slide-up">Slide from bottom edge</div>
+<div data-viks="slide-down">Slide from top edge</div>
+<div data-viks="slide-left">Slide from right edge</div>
+<div data-viks="slide-right">Slide from left edge</div>
+```
 
-  <div class="animation-group">
-    <h3 id="slide-animations">Slide Animations</h3>
-    <ul>
-      <li><code>slide-up</code></li>
-      <li><code>slide-down</code></li>
-      <li><code>slide-left</code></li>
-      <li><code>slide-right</code></li>
-    </ul>
-  </div>
-
-  <div class="animation-group">
-    <h3 id="shake-animation">Shake Animation</h3>
-    <ul>
-      <li><code>shake</code></li>
-      <li><code>shake-horizontal</code></li>
-      <li><code>shake-vertical</code></li>
-    </ul>
-  </div>
-
-  <div class="animation-group">
-    <h3 id="spin-animation">Spin Animation</h3>
-    <ul>
-      <li><code>spin</code></li>
-      <li><code>spin-bounce</code></li>
-      <li><code>spin-slow</code></li>
-      <li><code>spin-fast</code></li>
-      <li><code>spin-reverse</code></li>
-    </ul>
-  </div>
-
-  <div class="animation-group">
-    <h3 id="zoom-animations">Zoom Animations</h3>
-    <ul>
-      <li><code>zoom-in</code></li>
-      <li><code>zoom-in-up</code></li>
-      <li><code>zoom-in-down</code></li>
-      <li><code>zoom-in-left</code></li>
-      <li><code>zoom-in-right</code></li>
-      <li><code>zoom-out</code></li>
-      <li><code>zoom-out-up</code></li>
-      <li><code>zoom-out-down</code></li>
-      <li><code>zoom-out-left</code></li>
-      <li><code>zoom-out-right</code></li>
-    </ul>
-  </div>
-</div>
+### Flip Animations
+```html
+<div data-viks="flip-left">3D flip from right</div>
+<div data-viks="flip-right">3D flip from left</div>
+<div data-viks="flip-up">3D flip from bottom</div>
+<div data-viks="flip-down">3D flip from top</div>
+```
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-<div align="center">
-  <h2>☕ SUPPORT MY WORK</h2>
+<h2 align="center">🎯 EVENTS</h2>
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Buy%20Me%20A%20Coffee&fontSize=60&fontAlignY=35&animation=twinkling&fontColor=gradient" />
+### Global Events
 
-  <p>
-    <a href="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=white&color=aqua&width=435&lines=Support+my+work;Buy+Me+Golda+Coffee!+.☕">
-      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=white&color=aqua&width=435&lines=Support+my+work;Buy+Me+Golda+Coffee!+.☕" alt="Typing SVG">
-    </a>
-  </p>
+```javascript
+// Listen to all animations
+document.addEventListener('viks:in', (event) => {
+  console.log('Element animated in:', event.detail);
+});
 
-  <p>Say Thank You by Buying Someone a Coffee!</p>
+document.addEventListener('viks:out', (event) => {
+  console.log('Element animated out:', event.detail);
+});
+```
 
-  <a href="https://ko-fi.com/viksry">
-    <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" width="200">
-  </a>
+### Custom ID Events
 
-  <p>Your support helps me to continue creating and maintaining projects! ✨</p>
-</div>
+```html
+<div data-viks="fade-up id-hero">Hero Section</div>
+```
+
+```javascript
+// Listen to specific element by ID
+document.addEventListener('viks:in:hero', (event) => {
+  console.log('Hero section appeared!');
+});
+
+document.addEventListener('viks:out:hero', (event) => {
+  console.log('Hero section disappeared!');
+});
+```
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+<h2 align="center">🔧 API METHODS</h2>
+
+```javascript
+// Initialize library
+viks.init(options);
+
+// Soft refresh (reuses existing elements)
+viks.refresh();
+
+// Hard refresh (re-queries DOM)
+viks.refreshHard();
+```
+
+### When to Use Each Method
+
+- **`init()`** - Call once on page load
+- **`refresh()`** - Call after programmatic DOM changes (fast)
+- **`refreshHard()`** - Call when adding new `data-viks` elements (slower, but thorough)
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+<h2 align="center">⚡ PERFORMANCE</h2>
+
+### Built-in Optimizations
+
+- ✅ **Throttled Scroll** - Default 99ms throttle delay
+- ✅ **Debounced Resize** - Default 50ms debounce delay
+- ✅ **MutationObserver** - Automatic detection of new elements
+- ✅ **Device Detection** - Built-in mobile/tablet/phone detection
+- ✅ **Position Caching** - Element positions calculated once
+
+### Performance Tips
+
+```javascript
+// Increase throttle for slower devices
+viks.init({
+  throttleDelay: 150,
+  debounceDelay: 100
+});
+
+// Disable MutationObserver if not adding dynamic content
+viks.init({
+  disableMutationObserver: true
+});
+
+// Use 'once' for one-time animations
+viks.init({
+  once: true
+});
+```
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
@@ -581,9 +512,25 @@ setTimeout(() => {
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-<h2 align="center">📄 LICENSE</h2>
+<div align="center">
+  <h2>☕ SUPPORT MY WORK</h2>
 
-<p align="center">This project is <a href="./LICENSE">MIT</a> licensed.</p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Buy%20Me%20A%20Coffee&fontSize=60&fontAlignY=35&animation=twinkling&fontColor=gradient" />
+
+  <p>
+    <a href="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=aqua&center=true&width=435&lines=Support+VIKS+Development;Buy+Me+A+Coffee!+☕">
+      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=aqua&center=true&width=435&lines=Support+VIKS+Development;Buy+Me+A+Coffee!+☕" alt="Typing SVG">
+    </a>
+  </p>
+
+  <p>If VIKS Animation helped your project, consider supporting its development!</p>
+
+  <a href="https://ko-fi.com/viksry">
+    <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" width="200">
+  </a>
+
+  <p>Your support helps maintain and improve VIKS Animation! ✨</p>
+</div>
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
@@ -591,6 +538,15 @@ setTimeout(() => {
 
 <p align="center">Contributions, issues, and feature requests are welcome! See <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a></p>
 
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+<h2 align="center">📄 LICENSE</h2>
+
+<p align="center">This project is <a href="./LICENSE">MIT</a> licensed.</p>
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
 <div align="center">
   <p>Made with ❤️ by <a href="https://github.com/MeViksry">VIKRI AHPAD TANTOWI</a></p>
+  <p>Copyright © 2024 VIKS Animation. All rights reserved.</p>
 </div>
