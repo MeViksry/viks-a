@@ -784,16 +784,7 @@ Control exactly when animations trigger with 9 anchor positions:
 
 ### Visual Guide
 
-```
-Viewport               Element
-┌────────────┐        ┌────────────┐
-│            │        │ top        │ ← top-bottom, top-center, top-top
-│            │        │            │
-│   CENTER   │   ←→   │ center     │ ← center-bottom, center-center, center-top
-│            │        │            │
-│            │        │ bottom     │ ← bottom-bottom, bottom-center, bottom-top
-└────────────┘        └────────────┘
-```
+<img src="Visual/AnchorPlacement.jpg"/>
 
 ### All Positions
 
