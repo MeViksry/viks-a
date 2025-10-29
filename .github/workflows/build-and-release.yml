@@ -237,7 +237,7 @@ jobs:
             dist/css/viks.css.map
             dist/css/viks.min.css.map
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
   # ========================================
   # JOB 4: DEPLOY TO NPM (Optional)
