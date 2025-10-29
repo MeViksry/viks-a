@@ -1,0 +1,79 @@
+{
+  "type": "module",
+  "name": "viks-animation",
+  "version": "1.0.0",
+  "description": "Advanced JavaScript Animation Library with SCSS Support",
+  "main": "dist/js/viks.min.js",
+  "style": "dist/css/viks.min.css",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "prebuild": "npm run clean",
+    "build": "npm run build:webpack && npm run postbuild",
+    "build:webpack": "webpack --mode production",
+    "postbuild": "npm run format:css && npm run format:js",
+    "build:dev": "webpack --mode development",
+    "clean": "rimraf dist",
+    "format:css": "node scripts/format-viks-css.js",
+    "format:js": "prettier --write 'dist/js/viks.js'",
+    "format:all": "npm run format:css && npm run format:js",
+    "lint:js": "npx eslint src/js/**/*.js",
+    "lint:scss": "npx stylelint src/sass/**/*.scss",
+    "test": "jest",
+    "serve": "webpack serve --mode development --open",
+    "analyze": "ANALYZE=true webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeViksry/viks-animation.git"
+  },
+  "keywords": [
+    "animation",
+    "scroll",
+    "intersection-observer",
+    "parallax",
+    "3d",
+    "javascript",
+    "scss",
+    "css"
+  ],
+  "author": "VIKRI AHPAD TANTOWI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MeViksry/viks-animation/issues"
+  },
+  "homepage": "https://viksanimation.my.id/",
+  "devDependencies": {
+    "@babel/core": "^7.25.0",
+    "@babel/preset-env": "^7.25.0",
+    "@eslint/js": "^9.38.0",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "eslint": "^9.38.0",
+    "file-loader": "^6.2.0",
+    "globals": "^16.4.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "postcss": "^8.4.47",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.1.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "sass": "^1.80.0",
+    "sass-embedded": "^1.93.2",
+    "sass-loader": "^16.0.3",
+    "style-loader": "^4.0.0",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.96.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

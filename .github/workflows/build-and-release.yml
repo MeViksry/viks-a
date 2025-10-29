@@ -1,0 +1,339 @@
+name: Build and Release VIKS Animation
+
+on:
+  push:
+    branches: [ main, develop ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  # ========================================
+  # JOB 1: BUILD
+  # ========================================
+  build:
+    name: Build Assets
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: |
+          npm ci --legacy-peer-deps
+          npm ls
+
+      - name: 🔍 Lint JavaScript
+        run: npm run lint:js
+        continue-on-error: true
+
+      - name: 🔍 Lint SCSS
+        run: npm run lint:scss
+        continue-on-error: true
+
+      - name: 🏗️ Build Development Version
+        run: npm run build:dev
+
+      - name: 🏗️ Build Production Version
+        run: npm run build
+
+      - name: ✅ Verify Build Output
+        run: |
+          echo "✅ Verifying build output..."
+          files=(
+            "dist/js/viks.js"
+            "dist/js/viks.min.js" 
+            "dist/css/viks.css"
+            "dist/css/viks.min.css"
+            "dist/js/viks.js.map"
+            "dist/js/viks.min.js.map"
+            "dist/css/viks.css.map"
+            "dist/css/viks.min.css.map"
+          )
+          
+          for file in "${files[@]}"; do
+            if [[ -f "$file" ]]; then
+              echo "✓ $(basename $file) exists"
+            else
+              echo "✗ $(basename $file) missing"
+              exit 1
+            fi
+          done
+          echo "✅ All build files verified!"
+
+      - name: 📊 Check Build Output
+        run: |
+          echo "=== Build Output ==="
+          ls -lah dist/
+          echo ""
+          echo "=== JavaScript Files ==="
+          ls -lah dist/js/
+          echo ""
+          echo "=== CSS Files ==="
+          ls -lah dist/css/
+          echo ""
+          echo "=== File Sizes ==="
+          du -h dist/js/viks.js || echo "viks.js not found"
+          du -h dist/js/viks.min.js || echo "viks.min.js not found"
+          du -h dist/css/viks.css || echo "viks.css not found"
+          du -h dist/css/viks.min.css || echo "viks.min.css not found"
+
+      - name: 📤 Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: viks-animation-build-node-${{ matrix.node-version }}
+          path: |
+            dist/
+            !dist/**/*.map
+          retention-days: 30
+
+      - name: 📤 Upload Source Maps
+        uses: actions/upload-artifact@v4
+        with:
+          name: viks-animation-sourcemaps-node-${{ matrix.node-version }}
+          path: dist/**/*.map
+          retention-days: 30
+
+  # ========================================
+  # JOB 2: TEST
+  # ========================================
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: 🧪 Run Tests
+        run: npm test
+        continue-on-error: true
+
+  # ========================================
+  # JOB 3: RELEASE (Only on tags)
+  # ========================================
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    needs: [build, test]
+    if: startsWith(github.ref, 'refs/tags/v')
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: 🏗️ Build Production
+        run: npm run build
+
+      - name: ✅ Verify Release Files
+        run: |
+          echo "✅ Verifying release files..."
+          test -f dist/js/viks.js || exit 1
+          test -f dist/js/viks.min.js || exit 1
+          test -f dist/css/viks.css || exit 1
+          test -f dist/css/viks.min.css || exit 1
+          echo "✓ All release files verified"
+
+      - name: 📦 Create Release Package
+        run: |
+          mkdir -p release
+          cp -r dist/* release/
+          cp README.md release/ || echo "README.md not found"
+          cp LICENSE release/ || echo "LICENSE not found"
+          cp package.json release/ || echo "package.json not found"
+          cd release
+          zip -r ../viks-animation-${{ github.ref_name }}.zip .
+          tar -czf ../viks-animation-${{ github.ref_name }}.tar.gz .
+
+      - name: 📝 Generate Release Notes
+        id: release_notes
+        run: |
+          RELEASE_NOTES=$(cat << EOF
+          ## VIKS Animation ${{ github.ref_name }}
+
+          ### 📦 Assets Included:
+          - \`viks.js\` - Development version (unminified)
+          - \`viks.min.js\` - Production version (minified)  
+          - \`viks.css\` - Development styles (unminified)
+          - \`viks.min.css\` - Production styles (minified)
+          - \`*.map\` - Source maps for debugging
+
+          ### 📊 File Sizes:
+          \`\`\`
+          $(du -h dist/js/viks.js 2>/dev/null || echo "viks.js not found")
+          $(du -h dist/js/viks.min.js 2>/dev/null || echo "viks.min.js not found")
+          $(du -h dist/css/viks.css 2>/dev/null || echo "viks.css not found")
+          $(du -h dist/css/viks.min.css 2>/dev/null || echo "viks.min.css not found")
+          \`\`\`
+
+          ### 🚀 Installation:
+          \`\`\`bash
+          npm install viks-animation
+          \`\`\`
+
+          ### 📖 Documentation:
+          https://viksanimation.my.id/
+          EOF
+          )
+          echo "RELEASE_NOTES<<EOF" >> $GITHUB_OUTPUT
+          echo "$RELEASE_NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: 🎉 Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: VIKS Animation ${{ github.ref_name }}
+          body: ${{ steps.release_notes.outputs.RELEASE_NOTES }}
+          draft: false
+          prerelease: false
+          files: |
+            viks-animation-${{ github.ref_name }}.zip
+            viks-animation-${{ github.ref_name }}.tar.gz
+            dist/js/viks.js
+            dist/js/viks.min.js
+            dist/js/viks.js.map
+            dist/js/viks.min.js.map
+            dist/css/viks.css
+            dist/css/viks.min.css
+            dist/css/viks.css.map
+            dist/css/viks.min.css.map
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ========================================
+  # JOB 4: DEPLOY TO NPM (Optional)
+  # ========================================
+  publish-npm:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    needs: [build, test, release]
+    if: startsWith(github.ref, 'refs/tags/v')
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: 🏗️ Build Production
+        run: npm run build
+
+      - name: 📤 Publish to NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  # ========================================
+  # JOB 5: DEPLOY TO CDN (Optional - GitHub Pages)
+  # ========================================
+  deploy-cdn:
+    name: Deploy to CDN
+    runs-on: ubuntu-latest
+    needs: [build, test]
+    if: github.ref == 'refs/heads/main'
+    
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: 🏗️ Build Production
+        run: npm run build
+
+      - name: 📁 Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: 📤 Upload to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'dist'
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # ========================================
+  # JOB 6: NOTIFY (Optional)
+  # ========================================
+  notify:
+    name: Send Notifications
+    runs-on: ubuntu-latest
+    needs: [build, test, release, publish-npm, deploy-cdn]
+    if: always()
+    
+    steps:
+      - name: 📊 Build Summary
+        run: |
+          echo "=== BUILD SUMMARY ==="
+          echo "Build: ${{ needs.build.result }}"
+          echo "Test: ${{ needs.test.result }}"
+          echo "Release: ${{ needs.release.result || 'N/A' }}"
+          echo "NPM Publish: ${{ needs.publish-npm.result || 'N/A' }}"
+          echo "CDN Deploy: ${{ needs.deploy-cdn.result || 'N/A' }}"
+          
+          if [ "${{ needs.build.result }}" == "success" ] && [ "${{ needs.test.result }}" == "success" ]; then
+            echo "✅ All core jobs completed successfully!"
+          else
+            echo "❌ Some jobs failed!"
+            exit 1
+          fi

@@ -1,0 +1,154 @@
+ @use 'sass:map';
+// Animations variables
+$viks-distance: 100px !default;
+
+// Easing functions map
+$viks-easing: (
+  linear: cubic-bezier(.250, .250, .750, .750),
+  
+  ease: cubic-bezier(.250, .100, .250, 1),
+  ease-in: cubic-bezier(.420, 0, 1, 1),
+  ease-out: cubic-bezier(.000, 0, .580, 1),
+  ease-in-out: cubic-bezier(.420, 0, .580, 1),
+  
+  ease-in-back: cubic-bezier(.6, -.28, .735, .045),
+  ease-out-back: cubic-bezier(.175, .885, .32, 1.275),
+  ease-in-out-back: cubic-bezier(.68, -.55, .265, 1.55),
+  
+  ease-in-sine: cubic-bezier(.47, 0, .745, .715),
+  ease-out-sine: cubic-bezier(.39, .575, .565, 1),
+  ease-in-out-sine: cubic-bezier(.445, .05, .55, .95),
+  
+  ease-in-quad: cubic-bezier(.55, .085, .68, .53),
+  ease-out-quad: cubic-bezier(.25, .46, .45, .94),
+  ease-in-out-quad: cubic-bezier(.455, .03, .515, .955),
+  
+  ease-in-cubic: cubic-bezier(.55, .085, .68, .53),
+  ease-out-cubic: cubic-bezier(.25, .46, .45, .94),
+  ease-in-out-cubic: cubic-bezier(.455, .03, .515, .955),
+  
+  ease-in-quart: cubic-bezier(.55, .085, .68, .53),
+  ease-out-quart: cubic-bezier(.25, .46, .45, .94),
+  ease-in-out-quart: cubic-bezier(.455, .03, .515, .955)
+);
+
+// All Data Animation & events 
+[data-viks] {
+  pointer-events: none;
+  &.viks-animate {
+    pointer-events: auto;
+  }
+
+  // Duration & Delay Generation
+  @for $i from 1 through 60 {
+    body[data-viks-duration='#{$i * 50}'] &,
+    &[data-viks-duration='#{$i * 50}'] {
+      transition-duration: #{$i * 50}ms;
+    }
+
+    body[data-viks-delay='#{$i * 50}'] &,
+    &[data-viks-delay='#{$i * 50}'] {
+      transition-delay: 0s;
+
+      &.viks-animate {
+        transition-delay: #{$i * 50}ms;
+      }
+    }
+  }
+
+  // Easing Implementations
+  @each $key, $val in $viks-easing {
+    body[data-viks-easing="#{$key}"] &,
+    &[data-viks-easing="#{$key}"] {
+      transition-timing-function: $val;
+    }
+  }
+}
+
+@media screen {
+  html:not(.no-js) {
+    // Fade Animation
+    [data-viks^='fade'][data-viks^='fade'] {
+      opacity: 0;
+      transition-property: opacity, transform;
+
+      &.viks-animate {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    [data-viks='fade-up'] { transform: translate3d(0, $viks-distance, 0); }
+    [data-viks='fade-down'] { transform: translate3d(0, -$viks-distance, 0); }
+    [data-viks='fade-right'] { transform: translate3d(-$viks-distance, 0, 0); }
+    [data-viks='fade-left'] { transform: translate3d($viks-distance, 0, 0); }
+    [data-viks='fade-up-right'] { transform: translate3d(-$viks-distance, $viks-distance, 0); }
+    [data-viks='fade-up-left'] { transform: translate3d($viks-distance, $viks-distance, 0); }
+    [data-viks='fade-down-right'] { transform: translate3d(-$viks-distance, -$viks-distance, 0); }
+    [data-viks='fade-down-left'] { transform: translate3d($viks-distance, -$viks-distance, 0); }
+    
+    // Zoom Animation
+    [data-viks^='zoom'][data-viks^='zoom'] {
+      opacity: 0;
+      transition-property: opacity, transform;
+
+      &.viks-animate {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+    }
+
+    [data-viks='zoom-in'] { transform: scale(.6); }
+    [data-viks='zoom-in-up'] { transform: translate3d(0, $viks-distance, 0) scale(.6); }
+    [data-viks='zoom-in-down'] { transform: translate3d(0, -$viks-distance, 0) scale(.6); }
+    [data-viks='zoom-in-right'] { transform: translate3d(-$viks-distance, 0, 0) scale(.6); }
+    [data-viks='zoom-in-left'] { transform: translate3d($viks-distance, 0, 0) scale(.6); }
+    [data-viks='zoom-out'] { transform: scale(1.2); }
+    [data-viks='zoom-out-up'] { transform: translate3d(0, $viks-distance, 0) scale(1.2); }
+    [data-viks='zoom-out-down'] { transform: translate3d(0, -$viks-distance, 0) scale(1.2); }
+    [data-viks='zoom-out-right'] { transform: translate3d(-$viks-distance, 0, 0) scale(1.2); }
+    [data-viks='zoom-out-left'] { transform: translate3d($viks-distance, 0, 0) scale(1.2); }
+
+    // Slide Animation
+    [data-viks^='slide'][data-viks^='slide'] {
+      transition-property: transform;
+      visibility: hidden;
+
+      &.viks-animate {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    [data-viks='slide-up'] { transform: translate3d(0, 100%, 0); }
+    [data-viks='slide-down'] { transform: translate3d(0, -100%, 0); }
+    [data-viks='slide-right'] { transform: translate3d(-100%, 0, 0); }
+    [data-viks='slide-left'] { transform: translate3d(100%, 0, 0); }
+
+    // Flip Animation
+    [data-viks^='flip'][data-viks^='flip'] {
+      backface-visibility: hidden;
+      transition-property: transform;
+    }
+    
+    [data-viks='flip-left'] {
+      transform: perspective(2500px) rotateY(-100deg);
+      &.viks-animate { transform: perspective(2500px) rotateY(0); }
+    }
+
+    [data-viks='flip-right'] {
+      transform: perspective(2500px) rotateY(100deg);
+      &.viks-animate { transform: perspective(2500px) rotateY(0); }
+    }
+
+    [data-viks='flip-up'] {
+      transform: perspective(2500px) rotateX(-100deg);
+      &.viks-animate { transform: perspective(2500px) rotateX(0); }
+    }
+
+    [data-viks='flip-down'] {
+      transform: perspective(2500px) rotateX(100deg);
+      &.viks-animate { transform: perspective(2500px) rotateX(0); }
+    }
+  }
+}
