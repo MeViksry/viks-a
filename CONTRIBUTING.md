@@ -637,36 +637,98 @@ src/
 
 ```
 viks-animation/
-├── dist/                   # Compiled files (auto-generated)
-│   ├── css/
-│   │   ├── viks.css       # Compiled CSS
-│   │   └── viks.min.css   # Minified CSS
-│   └── js/
-│       ├── viks.js        # Compiled JS
-│       └── viks.min.js    # Minified JS
-├── src/                    # Source files
-│   ├── js/
-│   │   └── viks.js        # Main JavaScript
-│   └── scss/
-│       └── viks.scss      # Main SCSS
-├── examples/               # Example HTML files
-│   ├── index.html         # Demo page
-│   └── advanced.html      # Advanced examples
-├── docs/                   # Documentation
-│   ├── api.md             # API documentation
-│   └── guides/            # Tutorial guides
-├── test/                   # Test files
-│   ├── unit/              # Unit tests
-│   └── integration/       # Integration tests
-├── .github/                # GitHub config
-│   ├── workflows/         # CI/CD workflows
-│   └── ISSUE_TEMPLATE/    # Issue templates
-├── package.json           # Dependencies
-├── README.md              # Main documentation
-├── CONTRIBUTING.md        # This file
-├── LICENSE                # MIT License
-└── CHANGELOG.md           # Version history
+├── 📁 .github/                           # GitHub configuration files
+│   └── 📁 workflows/                     # GitHub automation workflows
+│       ├── 🔧 build-and-release.yml      # Build and release pipeline
+│       └── 🔧 ci.yml                     # Continuous integration pipeline
+│
+├── 📁 dist/                              # Distribution files (built assets)
+│   ├── 📁 css/                           # Compiled CSS files
+│   │   ├── 🎨 viks.css                   # Development CSS (unminified)
+│   │   ├── 🗺️ viks.css.map               # Source map for development CSS
+│   │   ├── 🎨 viks.min.css               # Production CSS (minified)
+│   │   └── 🗺️ viks.min.css.map           # Source map for production CSS
+│   └── 📁 js/                            # Compiled JavaScript files
+│       ├── ⚡ viks-css.js                 # CSS utilities JavaScript
+│       ├── 🗺️ viks-css.js.map            # Source map for viks-css.js
+│       ├── ⚡ viks-css.min.js             # Minified viks-css.js
+│       ├── 🗺️ viks-css.min.js.map        # Source map for minified version
+│       ├── ⚡ viks.js                     # Main JavaScript library
+│       ├── 🗺️ viks.js.map                # Source map for viks.js
+│       ├── ⚡ viks.min.js                 # Minified viks.js
+│       └── 🗺️ viks.min.js.map            # Source map for minified version
+│
+├── 📁 node_modules/                      # npm dependencies (auto-generated)
+│
+├── 📁 scripts/                           # Custom utility scripts
+│   └── 🔧 format-viks-css.js             # Script for formatting CSS
+│
+├── 📁 src/                               # Source code directory
+│   ├── 📁 js/                            # JavaScript source files
+│   │   └── ⚡ viks-animation.js           # Main animation library source
+│   └── 📁 sass/                          # Sass/SCSS source files
+│       └── 🎨 viks-animation.scss         # Main Sass stylesheet source
+│
+├── 📄 .eslintrc.json                     # ESLint configuration (legacy)
+├── 📄 .gitignore                         # Git ignore patterns
+├── 📄 .prettierignore                    # Prettier ignore patterns
+├── 📄 .prettierrc.json                   # Prettier code formatter config
+├── 📄 .stylelintrc.json                  # Stylelint CSS/SCSS linting config
+├── 📄 babel.config.js                    # Babel transpiler configuration
+├── 📄 eslint.config.js                   # ESLint configuration (modern)
+├── 📄 eslint.config.mjs                  # ESLint ES6 module configuration
+├── 📄 jest.config.js                     # Jest testing framework configuration
+├── 📄 Makefile                           # Automation tasks using Make
+├── 📄 package-lock.json                  # Locked npm dependencies versions
+├── 📄 package.json                       # npm dependencies and scripts
+├── 📄 postcss.config.js                  # PostCSS processor configuration
+├── 📄 SETUP.md                           # Project setup documentation
+├── 📄 stats.html                         # Build statistics (auto-generated)
+├── 📄 webpack.config.js                  # Webpack module bundler configuration
+├── 📖 README.md                          # Main project documentation
+└── 🤝 CONTRIBUTING.md                    # This file
 ```
+
+### 📂 Directory Breakdown
+
+#### `.github/workflows/` - CI/CD Automation
+Contains GitHub Actions workflows for automated testing, building, and deployment.
+
+**Files:**
+- `build-and-release.yml` - Automates build process and creates releases
+- `ci.yml` - Runs tests and linting on every commit
+
+#### `dist/` - Distribution Files
+**⚠️ Do not edit directly!** Auto-generated by build process.
+
+Contains compiled, minified, and production-ready files:
+- **CSS files** - Compiled from Sass with autoprefixer
+- **JS files** - Transpiled with Babel, bundled with Webpack
+- **Source maps** - For debugging minified code
+- **viks-css.js** - CSS utility helpers
+
+#### `scripts/` - Build Utilities
+Custom Node.js scripts for build automation and tooling.
+
+**Files:**
+- `format-viks-css.js` - Post-processing for CSS output
+
+#### `src/` - Source Code
+**✏️ Edit these files** for development.
+
+**Structure:**
+- `js/viks-animation.js` - Main library source code
+- `sass/viks-animation.scss` - Main stylesheet source
+
+#### Configuration Files
+- **ESLint** - JavaScript linting (`.eslintrc.json`, `eslint.config.js`)
+- **Prettier** - Code formatting (`.prettierrc.json`)
+- **Stylelint** - CSS/SCSS linting (`.stylelintrc.json`)
+- **Babel** - JavaScript transpilation (`babel.config.js`)
+- **Webpack** - Module bundling (`webpack.config.js`)
+- **PostCSS** - CSS processing (`postcss.config.js`)
+- **Jest** - Testing framework (`jest.config.js`)
+- **Makefile** - Build automation commands
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
