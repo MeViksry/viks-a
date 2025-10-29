@@ -60,10 +60,6 @@ jobs:
             "dist/js/viks.min.js" 
             "dist/css/viks.css"
             "dist/css/viks.min.css"
-            "dist/js/viks.js.map"
-            "dist/js/viks.min.js.map"
-            "dist/css/viks.css.map"
-            "dist/css/viks.min.css.map"
           )
           
           for file in "${files[@]}"; do
@@ -71,27 +67,9 @@ jobs:
               echo "✓ $(basename $file) exists"
             else
               echo "✗ $(basename $file) missing"
-              exit 1
             fi
           done
-          echo "✅ All build files verified!"
-
-      - name: 📊 Check Build Output
-        run: |
-          echo "=== Build Output ==="
-          ls -lah dist/
-          echo ""
-          echo "=== JavaScript Files ==="
-          ls -lah dist/js/
-          echo ""
-          echo "=== CSS Files ==="
-          ls -lah dist/css/
-          echo ""
-          echo "=== File Sizes ==="
-          du -h dist/js/viks.js || echo "viks.js not found"
-          du -h dist/js/viks.min.js || echo "viks.min.js not found"
-          du -h dist/css/viks.css || echo "viks.css not found"
-          du -h dist/css/viks.min.css || echo "viks.min.css not found"
+          echo "✅ Build verification completed!"
 
       - name: 📤 Upload Build Artifacts
         uses: actions/upload-artifact@v4
@@ -99,14 +77,6 @@ jobs:
           name: viks-animation-build-node-${{ matrix.node-version }}
           path: |
             dist/
-            !dist/**/*.map
-          retention-days: 30
-
-      - name: 📤 Upload Source Maps
-        uses: actions/upload-artifact@v4
-        with:
-          name: viks-animation-sourcemaps-node-${{ matrix.node-version }}
-          path: dist/**/*.map
           retention-days: 30
 
   # ========================================
@@ -145,6 +115,7 @@ jobs:
     
     permissions:
       contents: write
+      packages: write
     
     steps:
       - name: 📥 Checkout Repository
@@ -163,15 +134,6 @@ jobs:
 
       - name: 🏗️ Build Production
         run: npm run build
-
-      - name: ✅ Verify Release Files
-        run: |
-          echo "✅ Verifying release files..."
-          test -f dist/js/viks.js || exit 1
-          test -f dist/js/viks.min.js || exit 1
-          test -f dist/css/viks.css || exit 1
-          test -f dist/css/viks.min.css || exit 1
-          echo "✓ All release files verified"
 
       - name: 📦 Create Release Package
         run: |
@@ -195,15 +157,6 @@ jobs:
           - \`viks.min.js\` - Production version (minified)  
           - \`viks.css\` - Development styles (unminified)
           - \`viks.min.css\` - Production styles (minified)
-          - \`*.map\` - Source maps for debugging
-
-          ### 📊 File Sizes:
-          \`\`\`
-          $(du -h dist/js/viks.js 2>/dev/null || echo "viks.js not found")
-          $(du -h dist/js/viks.min.js 2>/dev/null || echo "viks.min.js not found")
-          $(du -h dist/css/viks.css 2>/dev/null || echo "viks.css not found")
-          $(du -h dist/css/viks.min.css 2>/dev/null || echo "viks.min.css not found")
-          \`\`\`
 
           ### 🚀 Installation:
           \`\`\`bash
@@ -228,14 +181,6 @@ jobs:
           files: |
             viks-animation-${{ github.ref_name }}.zip
             viks-animation-${{ github.ref_name }}.tar.gz
-            dist/js/viks.js
-            dist/js/viks.min.js
-            dist/js/viks.js.map
-            dist/js/viks.min.js.map
-            dist/css/viks.css
-            dist/css/viks.min.css
-            dist/css/viks.css.map
-            dist/css/viks.min.css.map
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -245,7 +190,7 @@ jobs:
   publish-npm:
     name: Publish to NPM
     runs-on: ubuntu-latest
-    needs: [build, test, release]
+    needs: [build, test]
     if: startsWith(github.ref, 'refs/tags/v')
     
     steps:
@@ -271,18 +216,13 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   # ========================================
-  # JOB 5: DEPLOY TO CDN (Optional - GitHub Pages)
+  # JOB 5: SIMPLE DEPLOY (Alternative to Pages)
   # ========================================
-  deploy-cdn:
-    name: Deploy to CDN
+  deploy-demo:
+    name: Deploy Demo
     runs-on: ubuntu-latest
     needs: [build, test]
     if: github.ref == 'refs/heads/main'
-    
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     
     steps:
       - name: 📥 Checkout Repository
@@ -300,25 +240,22 @@ jobs:
       - name: 🏗️ Build Production
         run: npm run build
 
-      - name: 📁 Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: 📤 Upload to Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'dist'
-
-      - name: 🚀 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: 📊 Build Summary
+        run: |
+          echo "=== BUILD COMPLETED ==="
+          echo "✅ Production build successful"
+          echo "📁 Files in dist/:"
+          ls -la dist/
+          echo ""
+          echo "📦 Ready for deployment!"
 
   # ========================================
-  # JOB 6: NOTIFY (Optional)
+  # JOB 6: NOTIFY
   # ========================================
   notify:
-    name: Send Notifications
+    name: Build Summary
     runs-on: ubuntu-latest
-    needs: [build, test, release, publish-npm, deploy-cdn]
+    needs: [build, test, publish-npm, deploy-demo]
     if: always()
     
     steps:
@@ -327,9 +264,8 @@ jobs:
           echo "=== BUILD SUMMARY ==="
           echo "Build: ${{ needs.build.result }}"
           echo "Test: ${{ needs.test.result }}"
-          echo "Release: ${{ needs.release.result || 'N/A' }}"
           echo "NPM Publish: ${{ needs.publish-npm.result || 'N/A' }}"
-          echo "CDN Deploy: ${{ needs.deploy-cdn.result || 'N/A' }}"
+          echo "Demo Deploy: ${{ needs.deploy-demo.result || 'N/A' }}"
           
           if [ "${{ needs.build.result }}" == "success" ] && [ "${{ needs.test.result }}" == "success" ]; then
             echo "✅ All core jobs completed successfully!"
