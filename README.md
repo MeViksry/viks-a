@@ -6,14 +6,6 @@
     <img src="https://img.shields.io/badge/JavaScript-Library-aqua?style=for-the-badge&logoColor=black" alt="JavaScript Library Badge"/>
   </p>
 
-  <p>
-    <img src="https://img.shields.io/npm/v/viks-animation?style=flat-square&color=aqua"/>
-    <img src="https://img.shields.io/npm/dm/viks-animation?style=flat-square&color=black"/>
-    <img src="https://img.shields.io/bundlephobia/minzip/viks-animation?style=flat-square&color=aqua"/>
-    <img src="https://img.shields.io/github/workflow/status/MeViksry/viks-animation/CI?style=flat-square&color=black"/>
-    <img src="https://img.shields.io/codecov/c/github/MeViksry/viks-animation?style=flat-square&color=aqua"/>
-  </p>
-
   <div>
     <img src="https://img.shields.io/badge/Chrome-Latest-aqua?style=flat-square&logo=google-chrome&logoColor=white"/>
     <img src="https://img.shields.io/badge/Firefox-Latest-aqua?style=flat-square&logo=firefox&logoColor=white"/>
