@@ -45,49 +45,53 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 - **🔧 Auto-Refresh** - MutationObserver support for dynamic content
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <h3>🎯 Core Features</h3>
-        <ul style="text-align: left;">
-          <li>✅ Scroll-Triggered Animations</li>
-          <li>✅ Inline Parameter Configuration</li>
-          <li>✅ 21 Easing Functions</li>
-          <li>✅ Device-Specific Controls</li>
-          <li>✅ Dynamic Content Support</li>
-          <li>✅ Custom Event System</li>
-          <li>✅ Anchor Placement (9 positions)</li>
-          <li>✅ Mirror Mode (scroll up/down)</li>
-        </ul>
-      </td>
-      <td align="center">
-        <h3>🛠️ Technical Highlights</h3>
-        <ul style="text-align: left;">
-          <li>🔹 Zero Dependencies</li>
-          <li>🔹 ~12KB gzipped</li>
-          <li>🔹 MutationObserver Support</li>
-          <li>🔹 Throttle & Debounce Built-in</li>
-          <li>🔹 TypeScript Ready</li>
-          <li>🔹 Tree-Shakeable</li>
-          <li>🔹 SSR Compatible</li>
-          <li>🔹 WCAG Compliant</li>
-        </ul>
-      </td>
-      <td align="center">
-        <h3>🎨 Animation Types</h3>
-        <ul style="text-align: left;">
-          <li>🎭 Fade (9 variants)</li>
-          <li>🎭 Zoom (10 variants)</li>
-          <li>🎭 Slide (4 directions)</li>
-          <li>🎭 Flip (4 directions)</li>
-          <li>🎭 Custom Animations</li>
-          <li>🎭 Stagger Support</li>
-          <li>🎭 Parallax Effects</li>
-          <li>🎭 Infinite Possibilities</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+  <h2>📋 Features Overview</h2>
+  
+  <div style="overflow-x: auto; width: 100%;">
+    <table style="min-width: 800px; border-collapse: separate; border-spacing: 20px;">
+      <tr>
+        <td align="center" style="vertical-align: top; background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <h3>🎯 Core Features</h3>
+          <ul style="text-align: left; padding-left: 20px;">
+            <li>✅ Scroll-Triggered Animations</li>
+            <li>✅ Inline Parameter Configuration</li>
+            <li>✅ 21 Easing Functions</li>
+            <li>✅ Device-Specific Controls</li>
+            <li>✅ Dynamic Content Support</li>
+            <li>✅ Custom Event System</li>
+            <li>✅ Anchor Placement (9 positions)</li>
+            <li>✅ Mirror Mode (scroll up/down)</li>
+          </ul>
+        </td>
+        <td align="center" style="vertical-align: top; background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <h3>🛠️ Technical Highlights</h3>
+          <ul style="text-align: left; padding-left: 20px;">
+            <li>🔹 Zero Dependencies</li>
+            <li>🔹 ~12KB gzipped</li>
+            <li>🔹 MutationObserver Support</li>
+            <li>🔹 Throttle & Debounce Built-in</li>
+            <li>🔹 TypeScript Ready</li>
+            <li>🔹 Tree-Shakeable</li>
+            <li>🔹 SSR Compatible</li>
+            <li>🔹 WCAG Compliant</li>
+          </ul>
+        </td>
+        <td align="center" style="vertical-align: top; background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <h3>🎨 Animation Types</h3>
+          <ul style="text-align: left; padding-left: 20px;">
+            <li>🎭 Fade (9 variants)</li>
+            <li>🎭 Zoom (10 variants)</li>
+            <li>🎭 Slide (4 directions)</li>
+            <li>🎭 Flip (4 directions)</li>
+            <li>🎭 Custom Animations</li>
+            <li>🎭 Stagger Support</li>
+            <li>🎭 Parallax Effects</li>
+            <li>🎭 Infinite Possibilities</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 
 <div align="center">
