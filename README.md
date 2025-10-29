@@ -14,13 +14,13 @@
     <img src="https://img.shields.io/codecov/c/github/MeViksry/viks-animation?style=flat-square&color=aqua"/>
   </p>
 
-  <h3>
+  <div>
     <img src="https://img.shields.io/badge/Chrome-Latest-aqua?style=flat-square&logo=google-chrome&logoColor=white"/>
     <img src="https://img.shields.io/badge/Firefox-Latest-aqua?style=flat-square&logo=firefox&logoColor=white"/>
     <img src="https://img.shields.io/badge/Safari-Latest-aqua?style=flat-square&logo=safari&logoColor=white"/>
     <img src="https://img.shields.io/badge/Edge-Latest-aqua?style=flat-square&logo=microsoft-edge&logoColor=white"/>
     <img src="https://img.shields.io/badge/Opera-Latest-aqua?style=flat-square&logo=opera&logoColor=white"/>
-  </h3>
+  </div>
 
 <p>
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
