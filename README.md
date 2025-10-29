@@ -81,7 +81,7 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 <li>🎭 Parallax Effects</li>
 <li>🎭 Infinite Possibilities</li>
 
----
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
 <div align="center">
   <p>
