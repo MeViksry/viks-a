@@ -44,49 +44,86 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 - **🛠️ Developer Friendly** - TypeScript support, comprehensive API, event callbacks
 - **🔧 Auto-Refresh** - MutationObserver support for dynamic content
 
-<div align="center">
+<!-- Key Features Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin: 30px 0;">
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px;">
+      <h4>✅ Zero Dependencies</h4>
+      <p>Pure vanilla JavaScript, no jQuery or other libraries needed</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 10px;">
+      <h4>💡 Lightweight</h4>
+      <p>Only ~12KB gzipped, won't slow down your site</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 10px;">
+      <h4>🎨 Rich Animation Library</h4>
+      <p>30+ pre-built animations (fade, zoom, slide, flip)</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; padding: 20px; border-radius: 10px;">
+      <h4>📊 21 Easing Functions</h4>
+      <p>From linear to elastic, cubic-bezier mastery</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; padding: 20px; border-radius: 10px;">
+      <h4>📱 Responsive & Smart</h4>
+      <p>Auto-detects devices, disable on mobile/tablet/phone</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; padding: 20px; border-radius: 10px;">
+      <h4>⚡ Developer Friendly</h4>
+      <p>TypeScript support, comprehensive API, event callbacks</p>
+    </div>
+    <div style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); color: #333; padding: 20px; border-radius: 10px;">
+      <h4>🔄 Auto-Refresh</h4>
+      <p>MutationObserver support for dynamic content</p>
+    </div>
+  </div>
+
+  <!-- Features Overview -->
   <h2>📋 Features Overview</h2>
   
-  <div style="overflow-x: auto; width: 100%;">
-    <table style="min-width: 800px; border-collapse: separate; border-spacing: 20px;">
+  <div style="overflow-x: auto; width: 100%; margin: 20px 0;">
+    <table style="min-width: 900px; border-collapse: separate; border-spacing: 15px; width: 100%;">
       <tr>
-        <td align="center" style="vertical-align: top; background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3>🎯 Core Features</h3>
-          <ul style="text-align: left; padding-left: 20px;">
-            <li>✅ Scroll-Triggered Animations</li>
-            <li>✅ Inline Parameter Configuration</li>
-            <li>✅ 21 Easing Functions</li>
-            <li>✅ Device-Specific Controls</li>
-            <li>✅ Dynamic Content Support</li>
-            <li>✅ Custom Event System</li>
-            <li>✅ Anchor Placement (9 positions)</li>
-            <li>✅ Mirror Mode (scroll up/down)</li>
+        <!-- Core Features -->
+        <td align="center" style="vertical-align: top; background: linear-gradient(145deg, #f0f8ff, #e1f5fe); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e3f2fd;">
+          <h3 style="color: #1976d2; margin-bottom: 20px;">🎯 Core Features</h3>
+          <ul style="text-align: left; padding-left: 20px; list-style: none;">
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ Scroll-Triggered Animations</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ Inline Parameter Configuration</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ 21 Easing Functions</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ Device-Specific Controls</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ Dynamic Content Support</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ Custom Event System</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ Anchor Placement (9 positions)</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">✅ Mirror Mode (scroll up/down)</li>
           </ul>
         </td>
-        <td align="center" style="vertical-align: top; background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3>🛠️ Technical Highlights</h3>
-          <ul style="text-align: left; padding-left: 20px;">
-            <li>🔹 Zero Dependencies</li>
-            <li>🔹 ~12KB gzipped</li>
-            <li>🔹 MutationObserver Support</li>
-            <li>🔹 Throttle & Debounce Built-in</li>
-            <li>🔹 TypeScript Ready</li>
-            <li>🔹 Tree-Shakeable</li>
-            <li>🔹 SSR Compatible</li>
-            <li>🔹 WCAG Compliant</li>
+
+        <!-- Technical Highlights -->
+        <td align="center" style="vertical-align: top; background: linear-gradient(145deg, #fff3e0, #ffecb3); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #ffe0b2;">
+          <h3 style="color: #f57c00; margin-bottom: 20px;">🛠️ Technical Highlights</h3>
+          <ul style="text-align: left; padding-left: 20px; list-style: none;">
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 Zero Dependencies</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 ~12KB gzipped</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 MutationObserver Support</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 Throttle & Debounce Built-in</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 TypeScript Ready</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 Tree-Shakeable</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 SSR Compatible</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🔹 WCAG Compliant</li>
           </ul>
         </td>
-        <td align="center" style="vertical-align: top; background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-          <h3>🎨 Animation Types</h3>
-          <ul style="text-align: left; padding-left: 20px;">
-            <li>🎭 Fade (9 variants)</li>
-            <li>🎭 Zoom (10 variants)</li>
-            <li>🎭 Slide (4 directions)</li>
-            <li>🎭 Flip (4 directions)</li>
-            <li>🎭 Custom Animations</li>
-            <li>🎭 Stagger Support</li>
-            <li>🎭 Parallax Effects</li>
-            <li>🎭 Infinite Possibilities</li>
+
+        <!-- Animation Types -->
+        <td align="center" style="vertical-align: top; background: linear-gradient(145deg, #f3e5f5, #e1bee7); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e1bee7;">
+          <h3 style="color: #7b1fa2; margin-bottom: 20px;">🎨 Animation Types</h3>
+          <ul style="text-align: left; padding-left: 20px; list-style: none;">
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Fade (9 variants)</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Zoom (10 variants)</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Slide (4 directions)</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Flip (4 directions)</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Custom Animations</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Stagger Support</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Parallax Effects</li>
+            <li style="margin: 12px 0; padding: 8px 12px; background: white; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">🎭 Infinite Possibilities</li>
           </ul>
         </td>
       </tr>
