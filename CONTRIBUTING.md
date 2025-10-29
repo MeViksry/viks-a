@@ -1,311 +1,706 @@
-# Contributing to VIKS Animation Library
-
 <div align="center">
 
-[![Code Style](https://img.shields.io/badge/Code_Style-Prettier-00FFFF?style=for-the-badge&logoColor=black)](#code-style)
-[![Commit Style](https://img.shields.io/badge/Commits-Conventional-aqua?style=for-the-badge&logoColor=black)](#commit-guidelines)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-00FFFF?style=for-the-badge&logoColor=black)](#submitting-pull-requests)
+# Contributing to VIKS Animation
+
+<img src="https://img.shields.io/badge/contributions-welcome-aqua?style=for-the-badge" alt="Contributions Welcome">
+
+<p>
+  <img src="https://img.shields.io/github/contributors/MeViksry/viks-animation?style=flat-square&color=aqua" alt="Contributors">
+  <img src="https://img.shields.io/github/issues/MeViksry/viks-animation?style=flat-square&color=black" alt="Issues">
+  <img src="https://img.shields.io/github/issues-pr/MeViksry/viks-animation?style=flat-square&color=aqua" alt="Pull Requests">
+</p>
+
+**Thank you for considering contributing to VIKS Animation! 🎉**
+
+We love your input! We want to make contributing to VIKS Animation as easy and transparent as possible, whether it's:
+
+- 🐛 Reporting a bug
+- 💬 Discussing the current state of the code
+- 📝 Submitting a fix
+- 🎨 Proposing new features
+- 🤝 Becoming a maintainer
 
 </div>
 
-## 🌟 Welcome!
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-First of all, thank you for considering contributing to VIKS Animation Library! People like you make VIKS a great tool. This document provides guidelines and steps for contributing.
+## 📑 Table of Contents
+
+- [Code of Conduct](#-code-of-conduct)
+- [Getting Started](#-getting-started)
+- [Development Setup](#-development-setup)
+- [How Can I Contribute?](#-how-can-i-contribute)
+  - [Reporting Bugs](#-reporting-bugs)
+  - [Suggesting Features](#-suggesting-features)
+  - [Code Contributions](#-code-contributions)
+  - [Documentation](#-documentation)
+- [Pull Request Process](#-pull-request-process)
+- [Coding Guidelines](#-coding-guidelines)
+- [Project Structure](#-project-structure)
+- [Testing](#-testing)
+- [Commit Message Guidelines](#-commit-message-guidelines)
+- [Community](#-community)
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
 ## 📜 Code of Conduct
 
-By participating in this project, you are expected to uphold our Code of Conduct:
+### Our Pledge
 
-- Use friendly and inclusive language
-- Respect different viewpoints and experiences
-- Accept constructive criticism gracefully
-- Focus on what's best for the community
-- Show empathy towards other community members
+We pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of:
+
+- Age, body size, disability
+- Ethnicity, gender identity and expression
+- Level of experience, education
+- Nationality, personal appearance
+- Race, religion, sexual identity and orientation
+
+### Our Standards
+
+**Examples of behavior that contributes to a positive environment:**
+
+✅ Using welcoming and inclusive language  
+✅ Being respectful of differing viewpoints  
+✅ Gracefully accepting constructive criticism  
+✅ Focusing on what is best for the community  
+✅ Showing empathy towards other community members
+
+**Examples of unacceptable behavior:**
+
+❌ Trolling, insulting/derogatory comments, personal attacks  
+❌ Public or private harassment  
+❌ Publishing others' private information  
+❌ Other conduct which could be considered inappropriate
+
+### Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at **kingvikvik25@gmail.com**. All complaints will be reviewed and investigated promptly and fairly.
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v14.0.0 or higher)
+- **npm** (v6.0.0 or higher) or **yarn** (v1.22.0 or higher)
+- **Git** (v2.0.0 or higher)
+- A code editor (we recommend **VS Code**)
+
+### Recommended VS Code Extensions
+
+```json
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "sysoev.language-stylus",
+    "ritwickdey.liveserver",
+    "eamodio.gitlens"
+  ]
+}
+```
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 💻 Development Setup
+
+### 1. Fork the Repository
+
+Click the **Fork** button at the top right of the [repository page](https://github.com/MeViksry/viks-animation).
+
+### 2. Clone Your Fork
+
+```bash
+# Clone your fork
+git clone https://github.com/YOUR_USERNAME/viks-animation.git
+
+# Navigate to the directory
+cd viks-animation
+
+# Add upstream remote
+git remote add upstream https://github.com/MeViksry/viks-animation.git
+```
+
+### 3. Install Dependencies
+
+```bash
+# Using npm
+npm install
+
+# Or using yarn
+yarn install
+```
+
+### 4. Create a Branch
+
+```bash
+# Create and checkout a new branch
+git checkout -b feature/your-feature-name
+
+# Or for bug fixes
+git checkout -b fix/bug-description
+```
+
+### 5. Start Development Server
+
+```bash
+# Start dev server with hot reload
+npm run dev
+
+# Or using yarn
+yarn dev
+```
+
+The development server will start at `http://localhost:3000`
+
+### 6. Build for Production
+
+```bash
+# Build minified files
+npm run build
+
+# Or using yarn
+yarn build
+```
+
+### 7. Run Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 🤝 How Can I Contribute?
+
+### 🐛 Reporting Bugs
+
+Before creating bug reports, please check the [issue list](https://github.com/MeViksry/viks-animation/issues) to avoid duplicates.
+
+#### How to Submit a Good Bug Report
+
+Use the bug report template and include:
+
+**Required Information:**
+- **Clear title** - Describe the issue in one sentence
+- **Description** - Detailed explanation of the problem
+- **Steps to reproduce** - Exact steps to reproduce the behavior
+- **Expected behavior** - What you expected to happen
+- **Actual behavior** - What actually happened
+- **Screenshots/GIFs** - If applicable
+- **Environment details:**
+  - Browser name and version
+  - OS name and version
+  - VIKS Animation version
+  - Device (desktop/mobile)
+
+**Example Bug Report:**
+
+```markdown
+### Bug: Animations not triggering on iOS Safari 14
+
+**Description:**
+Fade-up animations don't trigger when scrolling on iOS Safari 14.5.1
+
+**Steps to Reproduce:**
+1. Open demo page on iPhone 12 with iOS 14.5.1
+2. Scroll down to "Features" section
+3. Observe that cards don't animate
+
+**Expected Behavior:**
+Cards should fade up when scrolled into view
+
+**Actual Behavior:**
+Cards appear instantly without animation
+
+**Environment:**
+- Browser: Safari 14.5.1
+- OS: iOS 14.5.1
+- Device: iPhone 12
+- VIKS Version: 2.3.1
+
+**Screenshots:**
+[Attach screenshot]
+
+**Additional Context:**
+Works correctly on Chrome iOS
+```
+
+### 💡 Suggesting Features
+
+We love feature suggestions! Here's how to submit a good one:
+
+#### Before Suggesting a Feature
+
+- Check the [roadmap](https://github.com/MeViksry/viks-animation/projects)
+- Check [existing feature requests](https://github.com/MeViksry/viks-animation/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+- Consider if it fits the project scope
+
+#### How to Submit a Feature Request
+
+**Include:**
+- **Clear title** - Describe the feature concisely
+- **Problem statement** - What problem does this solve?
+- **Proposed solution** - How should it work?
+- **Alternatives considered** - What other solutions did you think about?
+- **Use cases** - Real-world examples
+- **Implementation ideas** - Technical approach (optional)
+
+**Example Feature Request:**
+
+```markdown
+### Feature: Custom Easing Curve Editor
+
+**Problem:**
+Users want to create custom easing functions beyond the 21 presets
+
+**Proposed Solution:**
+Add support for custom cubic-bezier values in inline syntax:
+`data-viks="fade-up easing-custom(0.68, -0.55, 0.265, 1.55)"`
+
+**Alternatives Considered:**
+1. CSS custom properties
+2. JavaScript configuration object
+3. Visual curve editor tool
+
+**Use Cases:**
+- Brand-specific animation timing
+- Matching existing design systems
+- Fine-tuning animation feel
+
+**Implementation:**
+Parse custom easing syntax in parseVIKSAttribute()
+Validate cubic-bezier values
+Apply to element's transition-timing-function
+```
+
+### 🔧 Code Contributions
+
+#### Types of Contributions We're Looking For
+
+**High Priority:**
+- 🐛 Bug fixes
+- 📱 Mobile/browser compatibility improvements
+- ⚡ Performance optimizations
+- ♿ Accessibility enhancements
+- 📝 Documentation improvements
+
+**Welcome:**
+- ✨ New animation types
+- 🎨 New easing functions
+- 🔧 API improvements
+- 🧪 Test coverage expansion
+
+**Please Discuss First:**
+- 🏗️ Major architecture changes
+- 💥 Breaking changes
+- 🎯 Significant feature additions
+
+#### Your First Code Contribution
+
+Not sure where to start? Look for issues labeled:
+
+- `good first issue` - Easy issues for beginners
+- `help wanted` - Issues where we need help
+- `documentation` - Docs that need improvement
+
+### 📖 Documentation
+
+Documentation is just as important as code! Help us improve:
+
+**Areas to Contribute:**
+- Fix typos and grammar
+- Add missing examples
+- Clarify confusing sections
+- Translate documentation
+- Create video tutorials
+- Write blog posts
+
+**Documentation Files:**
+- `README.md` - Main documentation
+- `CONTRIBUTING.md` - This file
+- `docs/` - Detailed guides
+- Code comments - Inline documentation
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
 ## 🔄 Pull Request Process
 
-1. **Branch Naming Convention**
-   - Feature: `feature/description`
-   - Bug Fix: `fix/description`
-   - Documentation: `docs/description`
-   - Performance: `perf/description`
-   - Animation: `animation/new-animation-name`
+### 1. Keep Your Fork Updated
 
-2. **Before Submitting PR**
-   - Update README.md with details of changes (if needed)
-   - Update documentation
-   - Add or update tests
-   - Ensure all tests pass
-   - Update version numbers following [SemVer](http://semver.org/)
-   - Test on multiple browsers (Chrome, Firefox, Safari, Edge)
-   - Verify responsive behavior on different screen sizes
+```bash
+# Fetch upstream changes
+git fetch upstream
 
-3. **PR Template**
-   ```markdown
-   ## Description
-   [Describe your changes]
+# Merge upstream main into your branch
+git merge upstream/main
+```
 
-   ## Type of Change
-   - [ ] Bug fix
-   - [ ] New feature
-   - [ ] New animation
-   - [ ] Breaking change
-   - [ ] Documentation update
-   - [ ] Performance improvement
+### 2. Make Your Changes
 
-   ## Checklist
-   - [ ] My code follows the style guidelines
-   - [ ] I have performed a self-review
-   - [ ] I have commented my code
-   - [ ] I have updated the documentation
-   - [ ] I have added tests
-   - [ ] All tests pass
-   - [ ] I have tested on multiple browsers
-   - [ ] Responsive behavior works correctly
-   ```
+- Write clean, readable code
+- Follow the [coding guidelines](#-coding-guidelines)
+- Add/update tests if needed
+- Update documentation if needed
 
-## 📝 Coding Standards
+### 3. Test Your Changes
+
+```bash
+# Run all tests
+npm test
+
+# Build to ensure no errors
+npm run build
+
+# Test in different browsers
+# - Chrome
+# - Firefox
+# - Safari
+# - Edge
+```
+
+### 4. Commit Your Changes
+
+Follow our [commit message guidelines](#-commit-message-guidelines):
+
+```bash
+# Stage your changes
+git add .
+
+# Commit with descriptive message
+git commit -m "feat: add custom easing support"
+```
+
+### 5. Push to Your Fork
+
+```bash
+git push origin feature/your-feature-name
+```
+
+### 6. Create Pull Request
+
+1. Go to your fork on GitHub
+2. Click **"New Pull Request"**
+3. Select your branch
+4. Fill out the PR template
+5. Submit!
+
+### Pull Request Template
+
+```markdown
+## Description
+Brief description of what this PR does
+
+## Type of Change
+- [ ] Bug fix (non-breaking change)
+- [ ] New feature (non-breaking change)
+- [ ] Breaking change (fix or feature that would break existing functionality)
+- [ ] Documentation update
+
+## Testing
+- [ ] Tested on Chrome
+- [ ] Tested on Firefox
+- [ ] Tested on Safari
+- [ ] Tested on Edge
+- [ ] Tested on mobile devices
+- [ ] All tests pass (`npm test`)
+- [ ] Build succeeds (`npm run build`)
+
+## Checklist
+- [ ] Code follows project style guidelines
+- [ ] Self-review completed
+- [ ] Comments added for complex code
+- [ ] Documentation updated
+- [ ] No new warnings generated
+- [ ] Tests added/updated
+- [ ] All tests pass
+
+## Related Issues
+Closes #123
+Related to #456
+
+## Screenshots (if applicable)
+[Add screenshots/GIFs]
+
+## Additional Notes
+Any additional context
+```
+
+### 7. Review Process
+
+**What Happens Next:**
+
+1. **Automated Checks** - CI/CD runs tests
+2. **Code Review** - Maintainers review your code
+3. **Feedback** - You may need to make changes
+4. **Approval** - Once approved, we'll merge!
+5. **Celebration** - You're now a contributor! 🎉
+
+**Review Timeline:**
+- Small PRs: 1-3 days
+- Medium PRs: 3-7 days
+- Large PRs: 1-2 weeks
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 📐 Coding Guidelines
 
 ### JavaScript Style Guide
 
-- Use ES6+ features
-- Follow Prettier configuration
-- Maximum line length: 100 characters
+**General Principles:**
+- Write clean, readable code
+- Prefer readability over cleverness
+- Keep functions small and focused
 - Use meaningful variable names
-- Document complex logic with JSDoc comments
-- Avoid using `localStorage` or `sessionStorage`
-- Use `const` for immutable values, `let` for mutable values
+- Comment complex logic
+
+**Code Style:**
 
 ```javascript
-// ✅ Good
-const calculateOffset = (element, options) => {
-  const { offset = 0 } = options;
-  return element.getBoundingClientRect().top + offset;
+// ✅ GOOD: Clear, descriptive naming
+const parseVIKSAttribute = (element) => {
+  const viksValue = element.getAttribute('data-viks');
+  if (!viksValue) return {};
+  
+  const parts = viksValue.trim().split(/\s+/);
+  // Parse each part...
 };
 
-/**
- * Gets animation delay from element
- * @param {HTMLElement} element - Target element
- * @returns {number} Delay value in milliseconds
- */
-getDelay(element) {
-  return parseInt(element.getAttribute('data-viks-delay')) || 
-         this.getAttributeFromString(element.getAttribute('data-viks'), 'delay-') || 
-         this.config.delay;
-}
-
-// ❌ Bad
-const calc = (e, o) => {
-  return e.getBoundingClientRect().top + (o.offset || 0);
+// ❌ BAD: Unclear naming, no comments
+const p = (e) => {
+  const v = e.getAttribute('data-viks');
+  if (!v) return {};
+  const p = v.trim().split(/\s+/);
 };
 ```
 
-### CSS Style Guide
-
-```css
-/* ✅ Good */
-.viks-animation {
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-[data-viks*="fade-up"] {
-  transform: translate3d(0, 100%, 0);
-}
-
-/* ❌ Bad */
-.anim {
-  transform:translateY(20px);opacity:0;
-  transition: all .3s ease
-}
-```
-
-### Animation Guidelines
-
-When creating new animations:
-
-1. **Naming Convention**: Use descriptive names (e.g., `fade-up`, `zoom-in-left`)
-2. **Performance**: Use `transform` and `opacity` for better performance
-3. **Use `translate3d`**: Enables hardware acceleration
-4. **Add `will-change`**: For properties that will animate
-5. **Include Responsive Variants**: Add desktop, tablet, and mobile versions if needed
-6. **Test Thoroughly**: Verify on different browsers and devices
-
-```css
-/* Example new animation */
-[data-viks*="rotate-in"] {
-  opacity: 0;
-  transform: rotate(-180deg) scale(0.5);
-}
-
-[data-viks*="rotate-in"].viks-animate {
-  opacity: 1;
-  transform: rotate(0) scale(1);
-}
-```
-
-## 📊 Commit Guidelines
-
-Follow [Conventional Commits](https://www.conventionalcommits.org/):
-
-```
-<type>(<scope>): <description>
-
-[optional body]
-
-[optional footer]
-```
-
-**Types:**
-- `feat`: New feature or animation
-- `fix`: Bug fix
-- `docs`: Documentation only changes
-- `style`: Code style (formatting, missing semicolons, etc.)
-- `refactor`: Code refactoring
-- `perf`: Performance improvements
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks
-
-**Scopes:**
-- `core`: Core VIKS functionality
-- `animations`: Animation-related changes
-- `3d`: Viks3D-related changes
-- `number`: VIKSNumber-related changes
-- `events`: Event system changes
-- `observer`: Intersection/Mutation Observer changes
-
-**Examples:**
-```
-feat(animations): add rotate-bounce animation
-
-- Added new animation combining rotation and bounce
-- Updated documentation with usage examples
-- Added tests for new animation
-
-Closes #123
-```
-
-```
-fix(observer): correct threshold calculation for mobile devices
-
-- Fixed intersection observer threshold on mobile
-- Improved scroll detection accuracy
-- Added unit tests
-
-Fixes #456
-```
-
-## 📚 Documentation
-
-### JSDoc Requirements
-
-All public methods must have JSDoc comments:
+**Naming Conventions:**
 
 ```javascript
-/**
- * Initializes animation for an element
- * @param {HTMLElement} element - Target element
- * @param {Object} options - Animation options
- * @param {number} [options.duration=1000] - Animation duration in ms
- * @param {string} [options.easing='ease'] - Animation timing function
- * @param {boolean} [options.once=false] - Animate only once
- * @returns {void}
- * @fires VIKS#beforeInit
- * @fires VIKS#afterInit
- */
+// Variables: camelCase
+const animationName = 'fade-up';
+const customDuration = 1000;
+
+// Constants: UPPER_SNAKE_CASE
+const DEFAULT_DURATION = 400;
+const MAX_OFFSET = 1000;
+
+// Functions: camelCase (descriptive verbs)
+function getInlineOption() {}
+function parseVIKSAttribute() {}
+function applyClasses() {}
+
+// Classes: PascalCase
+class Detector {}
+class MutationObserver {}
+
+// Private methods: _leadingUnderscore
+function _calculatePosition() {}
 ```
 
-### Documentation Updates
+**Code Structure:**
 
-When adding new features:
-
-1. Update README.md with usage examples
-2. Add animation to the animation catalog
-3. Update API documentation
-4. Include code examples
-5. Add screenshots or GIFs if applicable
-
-## 🧪 Testing Guidelines
-
-### Test Structure
-
-Tests are organized into main categories:
-
-1. **Initialization Tests**
 ```javascript
+// 1. Imports (if using modules)
+import { throttle } from './utils';
+
+// 2. Constants
+const DEFAULT_CONFIG = {
+  duration: 400,
+  easing: 'ease'
+};
+
+// 3. Helper functions
+const helperFunction = () => {};
+
+// 4. Main functions
+const mainFunction = () => {};
+
+// 5. Initialization
+const init = () => {};
+
+// 6. Exports
+export { init, mainFunction };
+```
+
+**Comments:**
+
+```javascript
+// ✅ GOOD: Explain WHY, not WHAT
+// Convert inline format to separate attributes for CSS compatibility
+if (originalViks.includes(' ')) {
+  el.node.setAttribute('data-viks', animationName);
+}
+
+// ❌ BAD: Stating the obvious
+// Set the data-viks attribute
+el.node.setAttribute('data-viks', animationName);
+
+/* **********************************************************
+ Section headers for major code blocks
+ Brief description of what this section does and why it exists
+* **********************************************************/
+```
+
+**Avoid:**
+- ❌ Global variables (use closures)
+- ❌ Magic numbers (use constants)
+- ❌ Deep nesting (max 3 levels)
+- ❌ Long functions (max 50 lines)
+- ❌ console.log in production code
+
+### SCSS Style Guide
+
+**File Organization:**
+
+```scss
+// 1. Variables
+$viks-distance: 100px;
+$viks-easing: (...);
+
+// 2. Mixins (if any)
+@mixin animation-base { ... }
+
+// 3. Base styles
+[data-viks] { ... }
+
+// 4. Animation definitions
+[data-viks='fade-up'] { ... }
+```
+
+**Naming:**
+
+```scss
+// Variables: kebab-case with prefix
+$viks-distance: 100px;
+$viks-duration: 400ms;
+
+// Classes: kebab-case
+.viks-animate { }
+.viks-init { }
+```
+
+**Code Style:**
+
+```scss
+// ✅ GOOD: Organized, readable
+[data-viks='fade-up'] {
+  opacity: 0;
+  transform: translate3d(0, $viks-distance, 0);
+  transition-property: opacity, transform;
+  
+  &.viks-animate {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// ❌ BAD: Messy, hard to read
+[data-viks='fade-up']{opacity:0;transform:translate3d(0,100px,0);transition-property:opacity,transform;&.viks-animate{opacity:1;transform:none;}}
+```
+
+### File Naming
+
+```
+src/
+├── js/
+│   ├── viks.js              # Main library file
+│   ├── utils/
+│   │   ├── throttle.js      # Utility functions
+│   │   └── debounce.js
+│   └── detectors/
+│       └── device.js        # Device detection
+├── scss/
+│   ├── viks.scss            # Main styles
+│   ├── _variables.scss      # SCSS variables
+│   └── animations/
+│       ├── _fade.scss       # Fade animations
+│       ├── _zoom.scss       # Zoom animations
+│       └── _slide.scss      # Slide animations
+└── examples/
+    └── basic.html           # Example files
+```
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 📁 Project Structure
+
+```
+viks-animation/
+├── dist/                   # Compiled files (auto-generated)
+│   ├── css/
+│   │   ├── viks.css       # Compiled CSS
+│   │   └── viks.min.css   # Minified CSS
+│   └── js/
+│       ├── viks.js        # Compiled JS
+│       └── viks.min.js    # Minified JS
+├── src/                    # Source files
+│   ├── js/
+│   │   └── viks.js        # Main JavaScript
+│   └── scss/
+│       └── viks.scss      # Main SCSS
+├── examples/               # Example HTML files
+│   ├── index.html         # Demo page
+│   └── advanced.html      # Advanced examples
+├── docs/                   # Documentation
+│   ├── api.md             # API documentation
+│   └── guides/            # Tutorial guides
+├── test/                   # Test files
+│   ├── unit/              # Unit tests
+│   └── integration/       # Integration tests
+├── .github/                # GitHub config
+│   ├── workflows/         # CI/CD workflows
+│   └── ISSUE_TEMPLATE/    # Issue templates
+├── package.json           # Dependencies
+├── README.md              # Main documentation
+├── CONTRIBUTING.md        # This file
+├── LICENSE                # MIT License
+└── CHANGELOG.md           # Version history
+```
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 🧪 Testing
+
+### Writing Tests
+
+```javascript
+// Example test structure
 describe('VIKS Animation', () => {
-  it('should initialize with default options', () => {
-    const element = document.createElement('div');
-    const viks = VIKS.init();
-    expect(viks.config).toHaveProperty('duration', 400);
-    expect(viks.config).toHaveProperty('easing', 'ease');
-  });
-});
-```
-
-2. **Animation Parameter Tests**
-```javascript
-describe('Animation Parameters', () => {
-  it('should get correct delay value', () => {
-    const element = document.createElement('div');
-    element.setAttribute('data-viks', 'fade-up delay-500');
-    document.body.appendChild(element);
-    
-    const viks = VIKS.init();
-    const delay = viks.getDelay(element);
-    expect(delay).toBe(500);
-  });
-});
-```
-
-3. **Responsive Animation Tests**
-```javascript
-describe('Responsive Animations', () => {
-  it('should apply desktop animation on large screens', () => {
-    global.innerWidth = 1200;
-    const element = document.createElement('div');
-    element.setAttribute('data-viks-desktop', 'fade-up');
-    
-    const animation = VIKS.getActiveAnimation(element);
-    expect(animation).toBe('fade-up');
-  });
-});
-```
-
-4. **Event System Tests**
-```javascript
-describe('Event System', () => {
-  it('should trigger afterAnimate event', (done) => {
-    const element = document.createElement('div');
-    element.setAttribute('data-viks', 'fade-up');
-    
-    VIKS.on('afterAnimate', (event) => {
-      expect(event.element).toBe(element);
-      done();
+  describe('parseVIKSAttribute', () => {
+    it('should parse inline duration', () => {
+      const element = document.createElement('div');
+      element.setAttribute('data-viks', 'fade-up duration-1000');
+      
+      const parsed = parseVIKSAttribute(element);
+      
+      expect(parsed.duration).toBe('1000');
+      expect(parsed.animation).toBe('fade-up');
     });
     
-    VIKS.applyAnimation(element);
+    it('should handle multiple parameters', () => {
+      const element = document.createElement('div');
+      element.setAttribute('data-viks', 'fade-up duration-1000 delay-500 easing-ease-out');
+      
+      const parsed = parseVIKSAttribute(element);
+      
+      expect(parsed.duration).toBe('1000');
+      expect(parsed.delay).toBe('500');
+      expect(parsed.easing).toBe('ease-out');
+    });
   });
 });
 ```
-
-### Testing Requirements
-
-- **Minimum 80% coverage** for new code
-- All animation types must have tests
-- Test browser compatibility features
-- Include tests for:
-  - Animation parameters (delay, duration, easing)
-  - Element detection and initialization
-  - Scroll behavior and triggers
-  - Animation application/removal
-  - Window events (resize, scroll)
-  - Intersection Observer functionality
-  - Event system (on, off, _fire)
-  - Responsive breakpoints (desktop, tablet, mobile)
-  - VIKSNumber animations
-  - Viks3D interactions
 
 ### Running Tests
 
@@ -313,279 +708,213 @@ describe('Event System', () => {
 # Run all tests
 npm test
 
-# Run tests with coverage
-npm test -- --coverage
-
 # Run specific test file
-npm test -- viks.test.js
+npm test -- parseVIKSAttribute.test.js
 
 # Run tests in watch mode
-npm test -- --watch
+npm run test:watch
 
-# Run tests for specific component
-npm test -- number.test.js
-npm test -- 3d.test.js
+# Generate coverage report
+npm run test:coverage
 ```
 
-## 🎨 Adding New Animations
+### Test Coverage
 
-To add a new animation to VIKS:
+We aim for:
+- **80%** overall coverage
+- **90%** coverage for core functionality
+- **100%** coverage for critical paths
 
-1. **Add CSS in viks.css**:
-```css
-[data-viks*="your-animation"] {
-  opacity: 0;
-  transform: /* your initial transform */;
-}
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-[data-viks*="your-animation"].viks-animate {
-  opacity: 1;
-  transform: /* your final transform */;
-}
-```
+## 💬 Commit Message Guidelines
 
-2. **Add Responsive Variants** (if needed):
-```css
-@media (min-width: 1024px) {
-  [data-viks-desktop*="your-animation"] { /* desktop styles */ }
-}
+We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification.
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  [data-viks-tablet*="your-animation"] { /* tablet styles */ }
-}
-
-@media (max-width: 767px) {
-  [data-viks-mobile*="your-animation"] { /* mobile styles */ }
-}
-```
-
-3. **Add Tests**:
-```javascript
-describe('Your Animation', () => {
-  it('should apply your-animation correctly', () => {
-    // test implementation
-  });
-});
-```
-
-4. **Update Documentation**:
-   - Add to animation catalog in README.md
-   - Include usage example
-   - Add to migration guide if it's a breaking change
-
-## 🏗️ Project Structure
+### Format
 
 ```
-viks-animation/
-├── src/
-│   ├── viks.js          # Core animation library
-│   └── viks.css         # Animation styles
-├── tests/
-│   ├── viks.test.js     # Core tests
-│   ├── number.test.js   # VIKSNumber tests
-│   └── 3d.test.js       # Viks3D tests
-├── docs/
-│   └── api.md           # API documentation
-├── examples/
-│   └── index.html       # Usage examples
-├── CONTRIBUTING.md
-├── README.md
-└── package.json
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
 ```
 
-## 👥 Community
+### Types
 
-### Getting Help
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, no logic change)
+- `refactor`: Code refactoring
+- `perf`: Performance improvements
+- `test`: Adding/updating tests
+- `chore`: Build process, dependencies, etc.
+- `ci`: CI/CD changes
 
-- **GitHub Issues**: Bug reports and feature requests
-- **Discord Community**: Real-time discussions
-- **Stack Overflow**: Tag your questions with `viks-animation`
-- **Email**: support@viksanimation.my.id
+### Examples
 
-### Regular Contributors
+**Good Commit Messages:**
 
-Active contributors get:
-- Access to development meetings
-- Mentioned in README.md
-- Early access to new features
-- Voting rights on major decisions
+```bash
+feat(inline): add support for custom easing functions
 
-## 🏆 Recognition
+Added parsing for custom cubic-bezier easing in inline syntax.
+Users can now use: data-viks="fade-up easing-custom(0.1,0.2,0.3,0.4)"
+
+Closes #123
+
+---
+
+fix(mobile): resolve animation jank on iOS Safari
+
+Fixed throttle timing that caused animations to stutter
+on iOS devices. Increased throttleDelay to 150ms for mobile.
+
+Fixes #456
+
+---
+
+docs(readme): update installation instructions
+
+Added pnpm installation method and clarified CDN usage
+
+---
+
+perf(scroll): optimize scroll event handler
+
+Reduced scroll handler execution time by 30% through
+better element caching and conditional checks
+
+---
+
+test(parser): add tests for inline parameter parsing
+
+Added 15 new test cases covering all inline parameters
+including edge cases and invalid input
+```
+
+**Bad Commit Messages:**
+
+```bash
+❌ update code
+❌ fix bug
+❌ changes
+❌ wip
+❌ more stuff
+```
+
+### Commit Message Tips
+
+- Use imperative mood ("add" not "added")
+- Capitalize first letter
+- No period at the end of subject
+- Keep subject under 50 characters
+- Separate subject from body with blank line
+- Wrap body at 72 characters
+- Explain **what** and **why**, not **how**
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 🌐 Community
+
+### Get Help
+
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/MeViksry/viks-animation/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/MeViksry/viks-animation/issues)
+- 📧 **Email**: kingvikvik25@gmail.com
+- 🔗 **Discord**: [Join our server](https://discord.gg/viks-animation)
+
+### Stay Updated
+
+- ⭐ **Star the repo** to show support
+- 👁️ **Watch the repo** for updates
+- 🐦 **Follow on Twitter**: [@viksry](https://twitter.com/viksry)
+- 📱 **Follow on Instagram**: [@meviksry](https://instagram.com/meviksry)
+
+### Contributors
+
+<a href="https://github.com/MeViksry/viks-animation/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MeViksry/viks-animation" />
+</a>
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 🎓 Learning Resources
+
+### Recommended Reading
+
+- [JavaScript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+- [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript)
+
+### Useful Tools
+
+- **Code Formatter**: [Prettier](https://prettier.io/)
+- **Linter**: [ESLint](https://eslint.org/)
+- **Browser Testing**: [BrowserStack](https://www.browserstack.com/)
+- **Performance Testing**: [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 📋 Checklist for Contributors
+
+Before submitting a PR, ensure:
+
+- [ ] Code follows style guidelines
+- [ ] Comments added for complex logic
+- [ ] Documentation updated (if needed)
+- [ ] Tests added/updated (if needed)
+- [ ] All tests pass (`npm test`)
+- [ ] Build succeeds (`npm run build`)
+- [ ] No console errors/warnings
+- [ ] Tested on multiple browsers
+- [ ] Commit messages follow guidelines
+- [ ] PR description is clear and complete
+
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
+## 🙏 Recognition
 
 All contributors will be:
-- Listed in CONTRIBUTORS.md
-- Mentioned in release notes
-- Credited in documentation
-- Added to the contributors page on the website
 
-## 📋 Issue Templates
+- ✨ Listed in our README
+- 🎉 Featured in release notes
+- 🏆 Added to contributors page
+- 💝 Mentioned on social media
 
-### Bug Report Template
+**Special recognition for:**
+- 🥇 First-time contributors
+- 🚀 Major feature contributors
+- 🐛 Bug bounty hunters
+- 📚 Documentation heroes
 
-```markdown
-**Description:**
-A clear description of the bug
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-**Steps to Reproduce:**
-1. Initialize VIKS with config...
-2. Add element with data-viks="..."
-3. Scroll to element
-4. Observe behavior
+## ❓ Questions?
 
-**Expected Behavior:**
-Element should animate smoothly
+Don't hesitate to ask! We're here to help:
 
-**Actual Behavior:**
-Element flickers or doesn't animate
+- Open a [Discussion](https://github.com/MeViksry/viks-animation/discussions)
+- Email us at kingvikvik25@gmail.com
+- Join our [Discord](https://discord.gg/viks-animation)
 
-**Environment:**
-- Browser: Chrome 120
-- OS: Windows 11
-- VIKS Version: 1.0.7
-- Screen Size: 1920x1080
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
-**Code Sample:**
-```html
-<div data-viks="fade-up" data-viks-duration="1000">
-  Content
+<div align="center">
+  <h2>Thank You! 🎉</h2>
+  <p>Your contributions make VIKS Animation better for everyone!</p>
+  
+  <img src="https://contrib.rocks/image?repo=MeViksry/viks-animation" alt="Contributors" />
+  
+  <p>
+    <strong>Made with ❤️ by the VIKS Animation community</strong>
+  </p>
 </div>
-```
-
-**Additional Context:**
-Add any other context about the problem here.
-```
-
-### Feature Request Template
-
-```markdown
-**Feature Description:**
-Add zoom-rotate-3d animation
-
-**Use Case:**
-I need a combined zoom and rotate animation for product showcases that works on mobile and desktop differently.
-
-**Proposed Solution:**
-```css
-[data-viks*="zoom-rotate-3d"] {
-  transform: scale(0.5) rotateY(-180deg);
-}
-```
-
-**Alternatives Considered:**
-- Using separate zoom and rotate animations
-- Creating custom animation with keyframes
-
-**Additional Context:**
-This would be useful for e-commerce sites showcasing 3D products.
-```
-
-### Animation Request Template
-
-```markdown
-**Animation Name:**
-bounce-rotate
-
-**Animation Type:**
-- [ ] Fade
-- [ ] Slide
-- [ ] Zoom
-- [x] Bounce
-- [x] Rotate
-- [ ] Flip
-- [ ] Custom
-
-**Description:**
-An animation that combines bouncing motion with rotation
-
-**Visual Reference:**
-[Link to video/GIF showing desired effect]
-
-**Use Case:**
-Attention-grabbing animation for call-to-action buttons
-
-**Initial Transform:**
-```css
-transform: scale(0.5) rotate(-45deg);
-```
-
-**Final Transform:**
-```css
-transform: scale(1) rotate(0);
-```
-```
-
-## 🚀 Development Workflow
-
-1. **Fork the repository**
-2. **Clone your fork**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/viks-animation.git
-   cd viks-animation
-   ```
-
-3. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-
-4. **Make your changes**
-   - Write code
-   - Add tests
-   - Update documentation
-
-5. **Test your changes**
-   ```bash
-   npm test
-   npm run lint
-   ```
-
-6. **Commit your changes**
-   ```bash
-   git add .
-   git commit -m "feat(animations): add bounce-rotate animation"
-   ```
-
-7. **Push to your fork**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-
-8. **Create a Pull Request**
-   - Go to the original repository
-   - Click "New Pull Request"
-   - Select your branch
-   - Fill out the PR template
-   - Submit for review
-
-## 📌 Code Review Process
-
-1. **Automated Checks**: CI/CD will run tests and linting
-2. **Maintainer Review**: Core team reviews code quality and design
-3. **Community Feedback**: Other contributors may provide input
-4. **Approval**: At least one maintainer approval required
-5. **Merge**: Maintainer will merge after approval
-
-## 🔒 Security
-
-If you discover a security vulnerability:
-
-1. **DO NOT** open a public issue
-2. Email security concerns to: security@viksanimation.my.id
-3. Include detailed information about the vulnerability
-4. Allow time for the team to address the issue
-
-## 📄 License
-
-By contributing to VIKS Animation Library, you agree that your contributions will be licensed under the MIT License.
 
 ---
 
 <div align="center">
-
-[![Questions](https://img.shields.io/badge/Have_Questions%3F-Ask_Away!-00FFFF?style=for-the-badge&logoColor=black)](https://github.com/Vixsry/viks-animation/issues)
-
-**Thank you for contributing to VIKS Animation Library! 🎉**
-
-Made with ❤️ by the VIKS community
-
+  <sub>Questions? Contact <a href="mailto:kingvikvik25@gmail.com">kingvikvik25@gmail.com</a></sub>
 </div>
