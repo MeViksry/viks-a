@@ -81,6 +81,8 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 <li>🎭 Parallax Effects</li>
 <li>🎭 Infinite Possibilities</li>
 
+---
+
 <div align="center">
   <p>
     <a href="mailto:kingvikvik25@gmail.com">
