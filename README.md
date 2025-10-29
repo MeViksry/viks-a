@@ -34,11 +34,13 @@
   <h3>✨ Modern scroll-triggered animation library with inline configuration support & zero dependencies ✨</h3>
 </div>
 
+<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+
 ## 🌟 What is VIKS Animation?
 
 VIKS Animation is a cutting-edge, lightweight JavaScript animation library designed for modern web development. Create stunning scroll-triggered animations with ease using our intuitive inline syntax or traditional attribute-based configuration. Built with vanilla JavaScript and optimized SCSS, VIKS delivers high-performance animations without compromising on features or flexibility.
 
-### Why Choose VIKS?
+### 🎯 Why Choose VIKS?
 
 - **🚀 Modern Inline Syntax** - Configure animations in a single attribute: `data-viks="fade-up duration-1000 delay-500 easing-ease-out-back"`
 - **🔄 Backward Compatible** - Traditional separate attributes still work: `data-viks="fade-up" data-viks-duration="1000"`
@@ -50,38 +52,51 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 - **🛠️ Developer Friendly** - TypeScript support, comprehensive API, event callbacks
 - **🔧 Auto-Refresh** - MutationObserver support for dynamic content
 
-<h3>🎯 Core Features</h3>
-<li>✅ Scroll-Triggered Animations</li>
-<li>✅ Inline Parameter Configuration</li>
-<li>✅ 21 Easing Functions</li>
-<li>✅ Device-Specific Controls</li>
-<li>✅ Dynamic Content Support</li>
-<li>✅ Custom Event System</li>
-<li>✅ Anchor Placement (9 positions)</li>
-<li>✅ Mirror Mode (scroll up/down)</li>
-
-<h3>🛠️ Technical Highlights</h3>
-<li>🔹 Zero Dependencies</li>
-<li>🔹 ~12KB gzipped</li>
-<li>🔹 MutationObserver Support</li>
-<li>🔹 Throttle & Debounce Built-in</li>
-<li>🔹 TypeScript Ready</li>
-<li>🔹 Tree-Shakeable</li>
-<li>🔹 SSR Compatible</li>
-<li>🔹 WCAG Compliant</li>
-
-<h3>🎨 Animation Types</h3>
-<ul style="text-align: left;">
-<li>🎭 Fade (9 variants)</li>
-<li>🎭 Zoom (10 variants)</li>
-<li>🎭 Slide (4 directions)</li>
-<li>🎭 Flip (4 directions)</li>
-<li>🎭 Custom Animations</li>
-<li>🎭 Stagger Support</li>
-<li>🎭 Parallax Effects</li>
-<li>🎭 Infinite Possibilities</li>
-
-<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <h3>🎯 Core Features</h3>
+        <ul style="text-align: left;">
+          <li>✅ Scroll-Triggered Animations</li>
+          <li>✅ Inline Parameter Configuration</li>
+          <li>✅ 21 Easing Functions</li>
+          <li>✅ Device-Specific Controls</li>
+          <li>✅ Dynamic Content Support</li>
+          <li>✅ Custom Event System</li>
+          <li>✅ Anchor Placement (9 positions)</li>
+          <li>✅ Mirror Mode (scroll up/down)</li>
+        </ul>
+      </td>
+      <td align="center">
+        <h3>🛠️ Technical Highlights</h3>
+        <ul style="text-align: left;">
+          <li>🔹 Zero Dependencies</li>
+          <li>🔹 ~12KB gzipped</li>
+          <li>🔹 MutationObserver Support</li>
+          <li>🔹 Throttle & Debounce Built-in</li>
+          <li>🔹 TypeScript Ready</li>
+          <li>🔹 Tree-Shakeable</li>
+          <li>🔹 SSR Compatible</li>
+          <li>🔹 WCAG Compliant</li>
+        </ul>
+      </td>
+      <td align="center">
+        <h3>🎨 Animation Types</h3>
+        <ul style="text-align: left;">
+          <li>🎭 Fade (9 variants)</li>
+          <li>🎭 Zoom (10 variants)</li>
+          <li>🎭 Slide (4 directions)</li>
+          <li>🎭 Flip (4 directions)</li>
+          <li>🎭 Custom Animations</li>
+          <li>🎭 Stagger Support</li>
+          <li>🎭 Parallax Effects</li>
+          <li>🎭 Infinite Possibilities</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
 
 <div align="center">
   <p>
@@ -453,17 +468,17 @@ Control precisely when animations trigger:
 **All 9 Anchor Positions:**
 ```
 ┌─────────────────┐
-│  top-bottom     │ ← Element top hits viewport bottom
-│  top-center     │ ← Element top hits viewport center
-│  top-top        │ ← Element top hits viewport top
+│  top-bottom        │ ← Element top hits viewport bottom
+│  top-center        │ ← Element top hits viewport center
+│  top-top           │ ← Element top hits viewport top
 │─────────────────│
-│  center-bottom  │ ← Element center hits viewport bottom
-│  center-center  │ ← Element center hits viewport center
-│  center-top     │ ← Element center hits viewport top
+│  center-bottom     │ ← Element center hits viewport bottom
+│  center-center     │ ← Element center hits viewport center
+│  center-top        │ ← Element center hits viewport top
 │─────────────────│
-│  bottom-bottom  │ ← Element bottom hits viewport bottom
-│  bottom-center  │ ← Element bottom hits viewport center
-│  bottom-top     │ ← Element bottom hits viewport top
+│  bottom-bottom     │ ← Element bottom hits viewport bottom
+│  bottom-center     │ ← Element bottom hits viewport center
+│  bottom-top        │ ← Element bottom hits viewport top
 └─────────────────┘
 ```
 
