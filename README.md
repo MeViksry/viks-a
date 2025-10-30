@@ -11,6 +11,7 @@
 [![Babel](https://img.shields.io/badge/Babel-F9DC3E.svg?style=for-the-badge&logo=babel&logoColor=black)](https://babeljs.io/)
 [![Stylelint](https://img.shields.io/badge/Stylelint-263238.svg?style=for-the-badge&logo=stylelint&logoColor=white)](https://stylelint.io/)
 [![Make](https://img.shields.io/badge/Make-2C8EBB.svg?style=for-the-badge&logo=cmake&logoColor=white)](https://www.gnu.org/software/make/)
+[![Prettier](https://img.shields.io/badge/Prettier-F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)](https://prettier.io/)
 
   <h3>✨ Modern scroll-triggered animation library with inline configuration support & zero dependencies ✨</h3>
 </div>
