@@ -3,7 +3,7 @@
   <h1>VIKS ANIMATION JS</h1>
   
   <p>
-    <img src="https://img.shields.io/badge/JavaScript-Library-aqua?style=for-the-badge&logoColor=black" alt="JavaScript Library Badge"/>
+    <img src="https://img.shields.io/badge/JavaScript-Library-blue?style=for-the-badge&logoColor=black" alt="JavaScript Library Badge"/>
   </p>
 
   <p>
