@@ -1455,10 +1455,10 @@ SOFTWARE.
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/Website-Visit_Demo-007ACC?style=for-the-badge&logo=googlechrome&logoColor=white)](https://viksanimation.my.id)
-[![Docs](https://img.shields.io/badge/Documentation-Read_More-28A745?style=for-the-badge&logo=gitbook&logoColor=white)](https://viksanimation.my.id/docs)
-[![GitHub](https://img.shields.io/badge/GitHub-Source_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MeViksry/viks-animation)
-[![NPM](https://img.shields.io/badge/NPM-Package-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/viks-animation)
+[![Website](https://img.shields.io/badge/Website-Visit_Demo-FF6B6B?style=for-the-badge&logo=googlechrome&logoColor=white)](https://viksanimation.my.id)
+[![Docs](https://img.shields.io/badge/Documentation-Read_More-4ECDC4?style=for-the-badge&logo=gitbook&logoColor=white)](https://viksanimation.my.id/docs)
+[![GitHub](https://img.shields.io/badge/GitHub-Source_Code-45B7D1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MeViksry/viks-animation)
+[![NPM](https://img.shields.io/badge/NPM-Package-F7B93E?style=for-the-badge&logo=npm&logoColor=black)](https://www.npmjs.com/package/viks-animation)
 
 </div>
 
