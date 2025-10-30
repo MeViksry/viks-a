@@ -7,9 +7,9 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/npm/v/viks-animation?style=flat-square&color=aqua"/>
-    <img src="https://img.shields.io/npm/dm/viks-animation?style=flat-square&color=black"/>
-    <img src="https://img.shields.io/bundlephobia/minzip/viks-animation?style=flat-square&color=aqua"/>
+    <img src="https://img.shields.io/npm/viksry/viks-animation?style=flat-square&color=aqua"/>
+    <img src="https://img.shields.io/npm/viksry/viks-animation?style=flat-square&color=black"/>
+    <img src="https://img.shields.io/bundlephobia/viksry/viks-animation?style=flat-square&color=aqua"/>
     <img src="https://img.shields.io/github/workflow/status/MeViksry/viks-animation/CI?style=flat-square&color=black"/>
     <img src="https://img.shields.io/codecov/c/github/MeViksry/viks-animation?style=flat-square&color=aqua"/>
   </p>
