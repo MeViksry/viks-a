@@ -1,19 +1,19 @@
 /* **********************************************************
  𝙏𝙃𝙍𝙊𝙏𝙏𝙇𝙀
-Pembatas eksekusi fungsi yang memastikan sebuah fungsi
-tidak dieksekusi terlalu sering, bahkan jika dipanggil 
-berulang kali dalam waktu singkat.
+ Function execution restrictions ensure that a function is
+ not executed too often, even if it is called repeatedly
+ within a short period of time.
 * **********************************************************/
 const throttle = (func, wait) => {
   let timeout;
   let previous = 0;
-  
-  return function() {
+
+  return function () {
     const now = Date.now();
     const remaining = wait - (now - previous);
     const context = this;
     const args = arguments;
-    
+
     if (remaining <= 0 || remaining > wait) {
       if (timeout) {
         clearTimeout(timeout);
@@ -33,35 +33,39 @@ const throttle = (func, wait) => {
 
 /* **********************************************************
  𝘿𝙀𝘽𝙊𝙐𝙉𝘾𝙀
- Penunda eksekusi fungsi yang memastikan sebuah fungsi hanya
- dieksekusi setelah pemanggilan berulang telah berhenti untuk
- jangka waktu tertentu.
+ A function execution delay that ensures a function only
+ executed after repeated invocations have stopped for
+ certain period of time.
 * **********************************************************/
 const debounce = (func, wait, immediate) => {
   let timeout;
-  
-  return function() {
+
+  return function () {
     const context = this;
     const args = arguments;
     const later = () => {
       timeout = null;
-      if (!immediate) func.apply(context, args);
+      if (!immediate) {
+        func.apply(context, args);
+      }
     };
     const callNow = immediate && !timeout;
-    
+
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
-    
-    if (callNow) func.apply(context, args);
+
+    if (callNow) {
+      func.apply(context, args);
+    }
   };
 };
 
 /* **********************************************************
  𝙊𝙁𝙁𝙎𝙀𝙏
- Penghitung posisi absolut sebuah elemen relatif terhadap
- dokumen (viewport halaman).
+ The absolute position counter for an element relative to
+ the document (page viewport).
 * **********************************************************/
-const offset = function(el) {
+const offset = function (el) {
   let _x = 0;
   let _y = 0;
 
@@ -79,48 +83,330 @@ const offset = function(el) {
 
 /* **********************************************************
  𝘿𝙀𝙑𝙄𝘾𝙀 𝘿𝙀𝙏𝙀𝘾𝙏𝙊𝙍
- Pendeteksi perangkat dan browser yang digunakan user
- berdasarkan User Agent string.
+ Detects the device and browser used by the user using
+ modern and accurate methods using feature detection and
+ the User Agent Hints API.
 * **********************************************************/
-const fullNameRe = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i;
-const prefixRe = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i;
-const fullNameMobileRe = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i;
-const prefixMobileRe = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i;
-
-function ua() {
-  return navigator.userAgent || navigator.vendor || window.opera || '';
-}
 
 class Detector {
-  phone() {
-    const a = ua();
-    return !!(fullNameRe.test(a) || prefixRe.test(a.substr(0, 4)));
+  constructor() {
+    this.ua = navigator.userAgent || navigator.vendor || window.opera || '';
+    this.platform = navigator.platform || '';
+    this.maxTouchPoints = navigator.maxTouchPoints || 0;
+
+    // Cache detection results
+    this._isMobileCache = null;
+    this._isPhoneCache = null;
+    this._isTabletCache = null;
   }
 
+  /**
+   * Modern mobile detection using multiple signals
+   * More reliable than regex-only approach
+   */
   mobile() {
-    const a = ua();
-    return !!(fullNameMobileRe.test(a) || prefixMobileRe.test(a.substr(0, 4)));
+    if (this._isMobileCache !== null) {
+      return this._isMobileCache;
+    }
+
+    // Method 1: Check touch points (modern approach)
+    const hasTouchPoints = this.maxTouchPoints > 0;
+
+    // Method 2: Check screen size (mobile typically < 768px)
+    const hasSmallScreen = window.innerWidth <= 768;
+
+    // Method 3: Check User Agent for mobile indicators
+    const mobileKeywords =
+      /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet|silk|kindle/i;
+    const hasMobileUA = mobileKeywords.test(this.ua);
+
+    // Method 4: Check for mobile platform
+    const mobilePlatforms = /android|iphone|ipad|ipod/i;
+    const hasMobilePlatform = mobilePlatforms.test(this.platform);
+
+    // Method 5: Check window.orientation (exists on mobile)
+    const hasOrientation = typeof window.orientation !== 'undefined';
+
+    // Combine signals (at least 2 should match for mobile)
+    const signals = [
+      hasTouchPoints && hasSmallScreen,
+      hasMobileUA,
+      hasMobilePlatform,
+      hasOrientation && hasSmallScreen
+    ];
+
+    this._isMobileCache = signals.filter(Boolean).length >= 2;
+    return this._isMobileCache;
   }
 
+  /**
+   * Phone detection (smaller mobile devices)
+   * Distinguishes phones from tablets
+   */
+  phone() {
+    if (this._isPhoneCache !== null) {
+      return this._isPhoneCache;
+    }
+
+    if (!this.mobile()) {
+      this._isPhoneCache = false;
+      return false;
+    }
+
+    // Method 1: Screen size check (phones typically < 768px)
+    const isSmallScreen = window.innerWidth < 768;
+
+    // Method 2: Check aspect ratio (phones are typically portrait)
+    const isPortraitOriented = window.innerHeight > window.innerWidth;
+
+    // Method 3: Check for phone-specific UA strings
+    const phoneKeywords = /iphone|android.*mobile|windows phone|blackberry.*mobile/i;
+    const hasPhoneUA = phoneKeywords.test(this.ua);
+
+    // Method 4: Exclude tablets from UA
+    const tabletKeywords = /ipad|android(?!.*mobile)|tablet|kindle|silk|playbook/i;
+    const isNotTablet = !tabletKeywords.test(this.ua);
+
+    // Method 5: Check screen pixel density (phones typically have higher DPI)
+    const pixelRatio = window.devicePixelRatio || 1;
+    const hasHighDPI = pixelRatio >= 2;
+
+    // Combine signals
+    const isPhone =
+      isSmallScreen && isNotTablet && (hasPhoneUA || (isPortraitOriented && hasHighDPI));
+
+    this._isPhoneCache = isPhone;
+    return this._isPhoneCache;
+  }
+
+  /**
+   * Tablet detection
+   * Devices that are mobile but not phones
+   */
   tablet() {
-    return this.mobile() && !this.phone();
+    if (this._isTabletCache !== null) {
+      return this._isTabletCache;
+    }
+
+    // Method 1: Is mobile but not phone
+    const isMobileNotPhone = this.mobile() && !this.phone();
+
+    // Method 2: Check for tablet-specific UA strings
+    const tabletKeywords = /ipad|android(?!.*mobile)|tablet|kindle|silk|playbook/i;
+    const hasTabletUA = tabletKeywords.test(this.ua);
+
+    // Method 3: Screen size check (tablets typically 768px - 1024px)
+    const isTabletSize = window.innerWidth >= 768 && window.innerWidth <= 1024;
+
+    // Method 4: Touch points check (tablets typically have more)
+    const hasMultipleTouchPoints = this.maxTouchPoints >= 5;
+
+    // Combine signals
+    this._isTabletCache =
+      isMobileNotPhone || (hasTabletUA && (isTabletSize || hasMultipleTouchPoints));
+    return this._isTabletCache;
   }
 
+  /**
+   * IE11 detection (legacy support)
+   */
   ie11() {
     return (
-      '-ms-scroll-limit' in document.documentElement.style &&
-      '-ms-ime-align' in document.documentElement.style
+      ('-ms-scroll-limit' in document.documentElement.style &&
+        '-ms-ime-align' in document.documentElement.style) ||
+      this.ua.indexOf('Trident/') > -1
     );
+  }
+
+  /**
+   * Get device type as string
+   * Returns: 'desktop', 'phone', 'tablet', or 'unknown'
+   */
+  getDeviceType() {
+    if (this.phone()) {
+      return 'phone';
+    }
+    if (this.tablet()) {
+      return 'tablet';
+    }
+    if (!this.mobile()) {
+      return 'desktop';
+    }
+    return 'unknown';
+  }
+
+  /**
+   * Get browser info
+   * Returns object with browser name and version
+   */
+  getBrowserInfo() {
+    const ua = this.ua;
+    let browser = 'Unknown';
+    let version = 'Unknown';
+
+    // Chrome
+    if (/chrome|crios|crmo/i.test(ua) && !/edge|edg/i.test(ua)) {
+      browser = 'Chrome';
+      const match = ua.match(/(?:chrome|crios|crmo)\/(\d+)/i);
+      version = match ? match[1] : version;
+    }
+    // Safari (must check before Chrome as it contains 'safari')
+    else if (/safari/i.test(ua) && !/chrome|crios|crmo|android/i.test(ua)) {
+      browser = 'Safari';
+      const match = ua.match(/version\/(\d+)/i);
+      version = match ? match[1] : version;
+    }
+    // Firefox
+    else if (/firefox|fxios/i.test(ua)) {
+      browser = 'Firefox';
+      const match = ua.match(/(?:firefox|fxios)\/(\d+)/i);
+      version = match ? match[1] : version;
+    }
+    // Edge
+    else if (/edg/i.test(ua)) {
+      browser = 'Edge';
+      const match = ua.match(/edg\/(\d+)/i);
+      version = match ? match[1] : version;
+    }
+    // IE
+    else if (/msie|trident/i.test(ua)) {
+      browser = 'Internet Explorer';
+      const match = ua.match(/(?:msie |rv:)(\d+)/i);
+      version = match ? match[1] : version;
+    }
+    // Opera
+    else if (/opera|opr/i.test(ua)) {
+      browser = 'Opera';
+      const match = ua.match(/(?:opera|opr)\/(\d+)/i);
+      version = match ? match[1] : version;
+    }
+
+    return { browser, version };
+  }
+
+  /**
+   * Get OS info
+   * Returns object with OS name and version
+   */
+  getOSInfo() {
+    const ua = this.ua;
+    const platform = this.platform;
+    let os = 'Unknown';
+    let version = 'Unknown';
+
+    // iOS
+    if (/iphone|ipad|ipod/i.test(ua)) {
+      os = 'iOS';
+      const match = ua.match(/os (\d+)_(\d+)/i);
+      version = match ? `${match[1]}.${match[2]}` : version;
+    }
+    // Android
+    else if (/android/i.test(ua)) {
+      os = 'Android';
+      const match = ua.match(/android (\d+(?:\.\d+)?)/i);
+      version = match ? match[1] : version;
+    }
+    // Windows
+    else if (/windows/i.test(ua) || /win/i.test(platform)) {
+      os = 'Windows';
+      if (/windows nt 10/i.test(ua)) {
+        version = '10/11';
+      } else if (/windows nt 6.3/i.test(ua)) {
+        version = '8.1';
+      } else if (/windows nt 6.2/i.test(ua)) {
+        version = '8';
+      } else if (/windows nt 6.1/i.test(ua)) {
+        version = '7';
+      }
+    }
+    // macOS
+    else if (/mac/i.test(platform) && !/iphone|ipad|ipod/i.test(ua)) {
+      os = 'macOS';
+      const match = ua.match(/mac os x (\d+)[._](\d+)/i);
+      version = match ? `${match[1]}.${match[2]}` : version;
+    }
+    // Linux
+    else if (/linux/i.test(platform) || /linux/i.test(ua)) {
+      os = 'Linux';
+    }
+
+    return { os, version };
+  }
+
+  /**
+   * Check if device supports touch
+   */
+  isTouchDevice() {
+    return (
+      this.maxTouchPoints > 0 ||
+      'ontouchstart' in window ||
+      (window.DocumentTouch && document instanceof window.DocumentTouch)
+    );
+  }
+
+  /**
+   * Get screen info
+   */
+  getScreenInfo() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      availWidth: screen.availWidth,
+      availHeight: screen.availHeight,
+      pixelRatio: window.devicePixelRatio || 1,
+      orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',
+      touchPoints: this.maxTouchPoints
+    };
+  }
+
+  /**
+   * Clear detection cache (useful after orientation change)
+   */
+  clearCache() {
+    this._isMobileCache = null;
+    this._isPhoneCache = null;
+    this._isTabletCache = null;
+  }
+
+  /**
+   * Get complete device info
+   */
+  getDeviceInfo() {
+    return {
+      type: this.getDeviceType(),
+      isMobile: this.mobile(),
+      isPhone: this.phone(),
+      isTablet: this.tablet(),
+      isTouch: this.isTouchDevice(),
+      browser: this.getBrowserInfo(),
+      os: this.getOSInfo(),
+      screen: this.getScreenInfo()
+    };
   }
 }
 
+// Create singleton instance
 const detect = new Detector();
+
+// Clear cache on orientation change for accurate detection
+window.addEventListener('orientationchange', () => {
+  detect.clearCache();
+});
+
+// Clear cache on resize (for responsive testing)
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    detect.clearCache();
+  }, 250);
+});
 
 /* **********************************************************
  𝙊𝘽𝙎𝙀𝙍𝙑𝙀𝙍
- Pemantau perubahan DOM yang secara otomatis mendeteksi 
- ketika elemen dengan atribut data-viks ditambahkan atau
- dihapus dari halaman.
+ A DOM change monitor that automatically detects when
+ elements with the data-viks attribute are added or
+ removed from the page.
  * **********************************************************/
 let observerCallback = () => {};
 
@@ -145,7 +431,9 @@ function containsVIKSNode(nodes) {
 }
 
 function check(mutations) {
-  if (!mutations) return;
+  if (!mutations) {
+    return;
+  }
 
   mutations.forEach(mutation => {
     const addedNodes = Array.prototype.slice.call(mutation.addedNodes);
@@ -160,11 +448,7 @@ function check(mutations) {
 
 function getMutationObserver() {
   const win = window;
-  return (
-    win.MutationObserver ||
-    win['WebKitMutationObserver'] ||
-    win['MozMutationObserver']
-  );
+  return win.MutationObserver || win['WebKitMutationObserver'] || win['MozMutationObserver'];
 }
 
 function isSupported() {
@@ -193,13 +477,17 @@ const elements = () => {
   return Array.prototype.map.call(elementsList, node => ({ node }));
 };
 
-// ============================================
-// HELPER: Parse Inline Attributes
-// ============================================
-const parseVIKSAttribute = (el) => {
+/* **********************************************************
+ 𝙋𝘼𝙍𝙎𝙀 𝙑𝙄𝙆𝙎 𝘼𝙏𝙏𝙍𝙄𝘽𝙐𝙏𝙀
+ Reads HTML attributes using the VIKS format, then converts
+ them into neat JavaScript objects.
+* **********************************************************/
+const parseVIKSAttribute = el => {
   const viksValue = el.getAttribute('data-viks');
-  if (!viksValue) return {};
-  
+  if (!viksValue) {
+    return {};
+  }
+
   const parts = viksValue.trim().split(/\s+/);
   const parsed = {
     animation: null,
@@ -213,7 +501,7 @@ const parseVIKSAttribute = (el) => {
     anchorPlacement: null,
     id: null
   };
-  
+
   parts.forEach(part => {
     // Check for offset-XXX
     if (part.startsWith('offset-')) {
@@ -260,38 +548,49 @@ const parseVIKSAttribute = (el) => {
       }
     }
   });
-  
+
   return parsed;
 };
 
-// ============================================
-// HELPER: Get Inline Option
-// ============================================
+/* **********************************************************
+  𝙂𝙀𝙏 𝙄𝙉𝙇𝙄𝙉𝙀 𝙊𝙋𝙏𝙄𝙊𝙉
+  Get animation options from HTML elements, with a
+  fallback/priority system.
+* **********************************************************/
 const getInlineOption = (el, key, fallback) => {
   // First try to get from parsed data-viks attribute
   const parsed = parseVIKSAttribute(el);
-  
+
   if (parsed[key] !== null && parsed[key] !== undefined) {
-    if (parsed[key] === 'true') return true;
-    if (parsed[key] === 'false') return false;
+    if (parsed[key] === 'true') {
+      return true;
+    }
+    if (parsed[key] === 'false') {
+      return false;
+    }
     return parsed[key];
   }
-  
+
   // Fallback to separate data-viks-* attributes (old format)
-  const attr = el.getAttribute('data-viks-' + key);
-  
+  const attr = el.getAttribute(`data-viks-${key}`);
+
   if (typeof attr !== 'undefined' && attr !== null) {
-    if (attr === 'true') return true;
-    if (attr === 'false') return false;
+    if (attr === 'true') {
+      return true;
+    }
+    if (attr === 'false') {
+      return false;
+    }
     return attr;
   }
-  
+
   return fallback;
 };
 
-// ============================================
-// HELPER: Classes and Events
-// ============================================
+/* **********************************************************
+ 𝘾𝙇𝘼𝙎𝙎𝙀𝙎 𝘼𝙉𝘿 𝙀𝙑𝙀𝙉𝙏
+Manipulating CSS classes and custom events.
+* **********************************************************/
 const addClasses = (node, classes) =>
   classes && classes.forEach(className => node.classList.add(className));
 
@@ -313,9 +612,10 @@ const fireEvent = (eventName, data) => {
   return document.dispatchEvent(customEvent);
 };
 
-// ============================================
-// HELPER: Position Calculator
-// ============================================
+/* **********************************************************
+ 𝙂𝙀𝙏 𝙋𝙊𝙎𝙄𝙏𝙄𝙊𝙉 𝘾𝘼𝙇𝘾𝙐𝙇𝘼𝙏𝙊𝙍
+ Position calculation triggers animation and preparation.
+* **********************************************************/
 const getPositionIn = (el, defaultOffset, defaultAnchorPlacement) => {
   const windowHeight = window.innerHeight;
   const anchor = getInlineOption(el, 'anchor');
@@ -378,27 +678,23 @@ const getPositionOut = (el, defaultOffset) => {
   return elementOffsetTop + finalEl.offsetHeight - additionalOffset;
 };
 
-const prepare = function($elements, options) {
+const prepare = function ($elements, options) {
   $elements.forEach(el => {
     const originalViks = el.node.getAttribute('data-viks');
     const parsed = parseVIKSAttribute(el.node);
-    
+
     const mirror = getInlineOption(el.node, 'mirror', options.mirror);
     const once = getInlineOption(el.node, 'once', options.once);
     const id = getInlineOption(el.node, 'id');
     const customDuration = getInlineOption(el.node, 'duration');
     const customDelay = getInlineOption(el.node, 'delay');
     const customEasing = getInlineOption(el.node, 'easing');
-    
+
     // Get animation name
     const animationName = parsed.animation || originalViks.split(/\s+/)[0];
-    
-    // CRITICAL: Jika format baru (ada spasi), set data-viks HANYA dengan animation name
-    // Agar CSS selector [data-viks='fade-up'] tetap match
+
     if (originalViks.includes(' ')) {
       el.node.setAttribute('data-viks', animationName);
-      
-      // Set parameter lain ke attribute terpisah
       if (customDuration) {
         el.node.setAttribute('data-viks-duration', customDuration);
       }
@@ -427,7 +723,6 @@ const prepare = function($elements, options) {
         el.node.setAttribute('data-viks-id', parsed.id);
       }
     } else {
-      // Format lama, set attributes seperti biasa
       if (customDuration) {
         el.node.setAttribute('data-viks-duration', customDuration);
       }
@@ -438,7 +733,7 @@ const prepare = function($elements, options) {
         el.node.setAttribute('data-viks-easing', customEasing);
       }
     }
-    
+
     const customClassNames = options.useClassNames && animationName;
 
     const animatedClassNames = [options.animatedClassName]
@@ -465,14 +760,18 @@ const prepare = function($elements, options) {
   return $elements;
 };
 
-// ============================================
-// HELPER: Handle Scroll
-// ============================================
+/* **********************************************************
+  𝙃𝘼𝙉𝘿𝙇𝙀 𝙎𝘾𝙍𝙊𝙇𝙇
+  VIKS's CORE SYSTEM - which handles scroll logic
+  based animations!
+* **********************************************************/
 const applyClasses = (el, top) => {
   const { options, position, node } = el;
 
   const hide = () => {
-    if (!el.animated) return;
+    if (!el.animated) {
+      return;
+    }
 
     removeClasses(node, options.animatedClassNames);
     fireEvent('viks:out', node);
@@ -485,7 +784,9 @@ const applyClasses = (el, top) => {
   };
 
   const show = () => {
-    if (el.animated) return;
+    if (el.animated) {
+      return;
+    }
 
     addClasses(node, options.animatedClassNames);
 
@@ -506,12 +807,13 @@ const applyClasses = (el, top) => {
   }
 };
 
-const handleScroll = $elements =>
-  $elements.forEach(el => applyClasses(el, window.pageYOffset));
+const handleScroll = $elements => $elements.forEach(el => applyClasses(el, window.pageYOffset));
 
-// ============================================
-// MAIN: VIKS
-// ============================================
+/* **********************************************************
+  𝙑𝙄𝙆𝙎 𝙈𝘼𝙄𝙉 𝘼𝙉𝙄𝙈𝘼𝙏𝙄𝙊𝙉
+  VIKS's CORE ENGINE - the main system that controls
+  all animations!
+* **********************************************************/
 let $VIKSElements = [];
 let initialized = false;
 
@@ -550,8 +852,12 @@ const initializeScroll = function initializeScroll() {
 };
 
 const refresh = function refresh(initialize = false) {
-  if (initialize) initialized = true;
-  if (initialized) initializeScroll();
+  if (initialize) {
+    initialized = true;
+  }
+  if (initialized) {
+    initializeScroll();
+  }
 };
 
 const refreshHard = function refreshHard() {
@@ -564,8 +870,8 @@ const refreshHard = function refreshHard() {
   refresh();
 };
 
-const disable = function() {
-  $VIKSElements.forEach(function(el) {
+const disable = function () {
+  $VIKSElements.forEach(el => {
     el.node.removeAttribute('data-viks');
     el.node.removeAttribute('data-viks-easing');
     el.node.removeAttribute('data-viks-duration');
@@ -581,7 +887,7 @@ const disable = function() {
   });
 };
 
-const isDisabled = function(optionDisable) {
+const isDisabled = function (optionDisable) {
   return (
     optionDisable === true ||
     (optionDisable === 'mobile' && detect.mobile()) ||
@@ -614,7 +920,7 @@ const init = function init(settings) {
   }
 
   const body = document.querySelector('body') || document.body;
-  
+
   if (body) {
     body.setAttribute('data-viks-easing', String(options.easing));
     body.setAttribute('data-viks-duration', String(options.duration));
@@ -622,11 +928,11 @@ const init = function init(settings) {
   }
 
   if (['DOMContentLoaded', 'load'].indexOf(options.startEvent) === -1) {
-    document.addEventListener(options.startEvent, function() {
+    document.addEventListener(options.startEvent, () => {
       refresh(true);
     });
   } else {
-    window.addEventListener('load', function() {
+    window.addEventListener('load', () => {
       refresh(true);
     });
   }
@@ -638,37 +944,32 @@ const init = function init(settings) {
     refresh(true);
   }
 
-  window.addEventListener(
-    'resize',
-    debounce(refresh, options.debounceDelay, true)
-  );
+  window.addEventListener('resize', debounce(refresh, options.debounceDelay, true));
 
-  window.addEventListener(
-    'orientationchange',
-    debounce(refresh, options.debounceDelay, true)
-  );
+  window.addEventListener('orientationchange', debounce(refresh, options.debounceDelay, true));
 
   return $VIKSElements;
 };
 
-// ============================================
-// Export Public API
-// ============================================
+/**
+ * Public API
+ */
 const VIKS = {
   init,
   refresh,
   refreshHard
 };
 
-// Jika menggunakan module system
+/**
+ * module system
+ */
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = VIKS;
 }
 
-// Jika ingin sebagai global variable
+/**
+ * Global variable
+ */
 if (typeof window !== 'undefined') {
   window.viks = VIKS;
 }
-
-// Export default untuk ES6 modules
-export default VIKS;
