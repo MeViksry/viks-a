@@ -375,21 +375,8 @@ Control precisely when animations trigger:
 ```
 
 **All 9 Anchor Positions:**
-```
-┌─────────────────┐
-│  top-bottom     │ ← Element top hits viewport bottom
-│  top-center     │ ← Element top hits viewport center
-│  top-top        │ ← Element top hits viewport top
-│─────────────────│
-│  center-bottom  │ ← Element center hits viewport bottom
-│  center-center  │ ← Element center hits viewport center
-│  center-top     │ ← Element center hits viewport top
-│─────────────────│
-│  bottom-bottom  │ ← Element bottom hits viewport bottom
-│  bottom-center  │ ← Element bottom hits viewport center
-│  bottom-top     │ ← Element bottom hits viewport top
-└─────────────────┘
-```
+
+<img src="Visual/AnchorPositions.jpg />
 
 ### Mirror Mode (Bidirectional)
 
