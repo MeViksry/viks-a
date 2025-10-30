@@ -376,7 +376,7 @@ Control precisely when animations trigger:
 
 **All 9 Anchor Positions:**
 
-<img src="Visual/AnchorPositions.jpg />
+<img src="Visual/AnchorPositions.jpg" />
 
 ### Mirror Mode (Bidirectional)
 
