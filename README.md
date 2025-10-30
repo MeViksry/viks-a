@@ -7,14 +7,6 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/npm/viksry/viks-animation?style=flat-square&color=aqua"/>
-    <img src="https://img.shields.io/npm/viksry/viks-animation?style=flat-square&color=black"/>
-    <img src="https://img.shields.io/bundlephobia/viksry/viks-animation?style=flat-square&color=aqua"/>
-    <img src="https://img.shields.io/github/workflow/status/MeViksry/viks-animation/CI?style=flat-square&color=black"/>
-    <img src="https://img.shields.io/codecov/c/github/MeViksry/viks-animation?style=flat-square&color=aqua"/>
-  </p>
-
-  <p>
     <img src="https://img.shields.io/badge/Chrome-Latest-aqua?style=flat-square&logo=google-chrome&logoColor=white"/>
     <img src="https://img.shields.io/badge/Firefox-Latest-aqua?style=flat-square&logo=firefox&logoColor=white"/>
     <img src="https://img.shields.io/badge/Safari-Latest-aqua?style=flat-square&logo=safari&logoColor=white"/>
