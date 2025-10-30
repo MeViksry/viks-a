@@ -121,22 +121,14 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 <h2 align="center">AVAILABLE ANIMATIONS</h2>
 
 <div align="center">
-  <p>
-    <a href="#fade-animations">
-      <img src="https://img.shields.io/badge/Fade-9_Variants-aqua?style=flat-square&logoColor=black" alt="Fade">
-    </a>
-    <a href="#flip-animations">
-      <img src="https://img.shields.io/badge/Flip-4_Directions-black?style=flat-square&logoColor=aqua" alt="Flip">
-    </a>
-    <a href="#slide-animations">
-      <img src="https://img.shields.io/badge/Slide-4_Directions-aqua?style=flat-square&logoColor=black" alt="Slide">
-    </a>
-    <a href="#zoom-animations">
-      <img src="https://img.shields.io/badge/Zoom-10_Variants-black?style=flat-square&logoColor=aqua" alt="Zoom">
-    </a>
-  </p>
-  
-  <h3>30+ Pre-built Animations Ready to Use</h3>
+
+[![Fade](https://img.shields.io/badge/Fade-9_Variants-007ACC?style=flat-square)](#fade-animations)
+[![Flip](https://img.shields.io/badge/Flip-4_Directions-28A745?style=flat-square)](#flip-animations)
+[![Slide](https://img.shields.io/badge/Slide-4_Directions-6F42C1?style=flat-square)](#slide-animations)
+[![Zoom](https://img.shields.io/badge/Zoom-10_Variants-DC3545?style=flat-square)](#zoom-animations)
+
+<h3>30+ Pre-built Animations Ready to Use</h3>
+
 </div>
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
