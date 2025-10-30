@@ -973,3 +973,5 @@ if (typeof module !== 'undefined' && module.exports) {
 if (typeof window !== 'undefined') {
   window.viks = VIKS;
 }
+
+export default VIKS;
