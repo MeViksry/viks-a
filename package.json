@@ -2,7 +2,7 @@
   "type": "module",
   "name": "viks-animation",
   "version": "1.0.0",
-  "description": "Advanced JavaScript Animation Library with SCSS Support",
+  "description": "Modern scroll-triggered animation library with inline configuration support & zero dependencies.",
   "main": "dist/js/viks.min.js",
   "style": "dist/css/viks.min.css",
   "scripts": {
