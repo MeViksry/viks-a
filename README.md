@@ -4,6 +4,7 @@
 
 [![npm](https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 [![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)](https://webpack.js.org/)
+[![Sass](https://img.shields.io/badge/Sass-CC6699.svg?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
 
 <p>
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
