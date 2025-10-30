@@ -1613,13 +1613,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <img src="https://komarev.com/ghpvc/?username=viks-animation&label=Repository+views&color=aqua&style=flat-square" alt="Repository views">
   </p>
   
-  <p>
-    <strong>Keywords:</strong> javascript animation library, scroll animation, scroll triggered animation, css animation, web animation, animate on scroll, aos alternative, scrollreveal alternative, intersection observer, scroll effects, modern animation library, lightweight animation, performance animation, inline configuration, data attribute animation, zero dependency animation
-  </p>
 </div>
 
 ---
 
+<p>
+
 <div align="center">
-  <sub>Built with modern web technologies • Maintained by <a href="https://github.com/MeViksry">@MeViksry</a></sub>
+    <a href="https://viksanimation.my.id">
+      <img src="https://img.shields.io/badge/Website-Visit_Demo-aqua?style=for-the-badge" alt="Github">
+    </a>
 </div>
