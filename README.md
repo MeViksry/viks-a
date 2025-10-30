@@ -1,8 +1,8 @@
 <div align="center">
 
   <h1>VIKS ANIMATION JS</h1>
-  
-[![npm version](https://img.shields.io/npm/v/package-name.svg)](https://www.npmjs.com/package/viks-animation)
+
+[![npm version](https://img.shields.io/npm/v/package-name.svg)](https://www.npmjs.com/package/package-name)
 [![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)](https://webpack.js.org/)
 
 <p>
