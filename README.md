@@ -12,7 +12,6 @@
 [![Stylelint](https://img.shields.io/badge/Stylelint-263238.svg?style=for-the-badge&logo=stylelint&logoColor=white)](https://stylelint.io/)
 [![Make](https://img.shields.io/badge/Make-2C8EBB.svg?style=for-the-badge&logo=cmake&logoColor=white)](https://www.gnu.org/software/make/)
 [![Prettier](https://img.shields.io/badge/Prettier-F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)](https://prettier.io/)
-[![Composer](https://img.shields.io/badge/Composer-885630.svg?style=for-the-badge&logo=composer&logoColor=white)](https://getcomposer.org/)
 
   <h3>✨ Modern scroll-triggered animation library with inline configuration support & zero dependencies ✨</h3>
 </div>
