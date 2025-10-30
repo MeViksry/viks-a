@@ -2,7 +2,7 @@
 
   <h1>VIKS ANIMATION JS</h1>
   
-    <img src="https://img.shields.io/badge/Animation-OnScrol-blue?style=for-the-badge&logoColor=#000000"/>
+[![npm version](https://img.shields.io/npm/v/package-name.svg)](https://www.npmjs.com/package/viks-animation)
 
 <p>
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
