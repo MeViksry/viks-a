@@ -82,26 +82,14 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 </div>
 
 <div align="center">
-  <p>
-    <a href="mailto:kingvikvik25@gmail.com">
-      <img src="https://img.shields.io/badge/Email-aqua?style=for-the-badge&logo=gmail&logoColor=black" alt="Email">
-    </a>
-    <a href="https://www.linkedin.com/in/MeViksry">
-      <img src="https://img.shields.io/badge/LinkedIn-black?style=for-the-badge&logo=linkedin&logoColor=aqua" alt="LinkedIn">
-    </a>
-    <a href="https://www.instagram.com/meviksry">
-      <img src="https://img.shields.io/badge/Instagram-aqua?style=for-the-badge&logo=instagram&logoColor=black" alt="Instagram">
-    </a>
-    <a href="https://www.tiktok.com/@viksry">
-      <img src="https://img.shields.io/badge/TikTok-black?style=for-the-badge&logo=tiktok&logoColor=aqua" alt="TikTok">
-    </a>
-    <a href="https://www.threads.net/@meviksry">
-      <img src="https://img.shields.io/badge/Threads-aqua?style=for-the-badge&logo=threads&logoColor=black" alt="Threads">
-    </a>
-    <a href="https://www.facebook.com/share/19aKzAtBeZ/">
-      <img src="https://img.shields.io/badge/Facebook-black?style=for-the-badge&logo=facebook&logoColor=aqua" alt="Facebook">
-    </a>
-  </p>
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kingvikvik25@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/MeViksry)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/meviksry)
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@viksry)
+[![Threads](https://img.shields.io/badge/Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.net/@meviksry)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/share/19aKzAtBeZ/)
+
 </div>
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
