@@ -6,13 +6,14 @@
     <img src="https://img.shields.io/badge/Animation-OnScrol-blue?style=for-the-badge&logoColor=#000000"/>
   </p>
 
-
+<p>
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
       <img src="https://img.shields.io/badge/LICENSE-MIT-black?style=flat-square" alt="License Badge">
     </a>
     <a href="https://www.npmjs.com/package/viks-animation" target="_blank">
       <img src="https://img.shields.io/badge/DOWNLOAD-1K%2FMONTH-aqua?style=flat-square" alt="Downloads Badge">
     </a>
+</p>
 
   <h3>✨ Modern scroll-triggered animation library with inline configuration support & zero dependencies ✨</h3>
 </div>
