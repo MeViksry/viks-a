@@ -145,10 +145,10 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 
 <div align="center">
 
-[![NPM](https://img.shields.io/badge/NPM-black?style=for-the-badge&logo=npm&logoColor=aqua)](#npm-installation)
-[![Yarn](https://img.shields.io/badge/Yarn-aqua?style=for-the-badge&logo=yarn&logoColor=black)](#yarn-installation)
-[![CDN](https://img.shields.io/badge/CDN-black?style=for-the-badge&logo=jsdelivr&logoColor=aqua)](#cdn-installation)
-[![Manual](https://img.shields.io/badge/Manual-aqua?style=for-the-badge&logoColor=black)](#manual-installation)
+[![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)](#npm-installation)
+[![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)](#yarn-installation)
+[![CDN](https://img.shields.io/badge/CDN-E84D3D?style=for-the-badge&logo=jsdelivr&logoColor=white)](#cdn-installation)
+[![Manual](https://img.shields.io/badge/Manual-6C757D?style=for-the-badge&logo=download&logoColor=white)](#manual-installation)
 
 </div>
 
