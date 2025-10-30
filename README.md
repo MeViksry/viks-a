@@ -36,52 +36,6 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 - **🔧 Auto-Refresh** - MutationObserver support for dynamic content
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <h3>Core Features</h3>
-        <ul style="text-align: left;">
-          <li>Scroll-Triggered Animations</li>
-          <li>Inline Parameter Configuration</li>
-          <li>21 Easing Functions</li>
-          <li>Device-Specific Controls</li>
-          <li>Dynamic Content Support</li>
-          <li>Custom Event System</li>
-          <li>Anchor Placement (9 positions)</li>
-          <li>Mirror Mode (scroll up/down)</li>
-        </ul>
-      </td>
-      <td align="center">
-        <h3>🛠️ Technical Highlights</h3>
-        <ul style="text-align: left;">
-          <li>Zero Dependencies</li>
-          <li>~12KB gzipped</li>
-          <li>MutationObserver Support</li>
-          <li>Throttle & Debounce Built-in</li>
-          <li>TypeScript Ready</li>
-          <li>Tree-Shakeable</li>
-          <li>SSR Compatible</li>
-          <li>WCAG Compliant</li>
-        </ul>
-      </td>
-      <td align="center">
-        <h3>Animation Types</h3>
-        <ul style="text-align: left;">
-          <li>Fade (9 variants)</li>
-          <li>Zoom (10 variants)</li>
-          <li>Slide (4 directions)</li>
-          <li>Flip (4 directions)</li>
-          <li>Custom Animations</li>
-          <li>Stagger Support</li>
-          <li>Parallax Effects</li>
-          <li>Infinite Possibilities</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kingvikvik25@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/MeViksry)
