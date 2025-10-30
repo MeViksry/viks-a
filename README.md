@@ -1465,55 +1465,6 @@ SOFTWARE.
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
 <div align="center">
-  <h2>☕ Support My Work</h2>
-
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Buy%20Me%20A%20Coffee&fontSize=60&fontAlignY=35&animation=twinkling&fontColor=gradient" />
-
-  <p>
-    <a href="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=aqua&center=true&width=435&lines=Support+VIKS+Development;Buy+Me+A+Coffee!+☕;Thank+You+For+Your+Support!">
-      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=aqua&center=true&width=435&lines=Support+VIKS+Development;Buy+Me+A+Coffee!+☕;Thank+You+For+Your+Support!" alt="Typing SVG">
-    </a>
-  </p>
-
-  <p>If VIKS Animation helped your project, consider supporting its development!</p>
-
-  <a href="https://ko-fi.com/viksry">
-    <img src="https://storage.ko-fi.com/cdn/kofi2.png?v=3" width="200" alt="Ko-fi">
-  </a>
-
-  <p>Your support helps maintain and improve VIKS Animation! ✨</p>
-  
-  <p>
-    <img src="https://img.shields.io/badge/Supporters-Coming_Soon-aqua?style=flat-square" alt="Supporters">
-    <img src="https://img.shields.io/badge/Coffee_Goal-100-black?style=flat-square" alt="Goal">
-  </p>
-</div>
-
-<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
-
-<div align="center">
-  <h2>⭐ Star History</h2>
-  
-  <a href="https://star-history.com/#MeViksry/viks-animation&Date">
-    <img src="https://api.star-history.com/svg?repos=MeViksry/viks-animation&type=Date" alt="Star History Chart">
-  </a>
-</div>
-
-<hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
-
-<div align="center">
-  <h3>Made with ❤️ by <a href="https://github.com/MeViksry">MeViksry</a></h3>
-  <p>
-    <img src="https://komarev.com/ghpvc/?username=viks-animation&label=Repository+views&color=aqua&style=flat-square" alt="Repository views">
-  </p>
-  
-</div>
-
----
-
-<p>
-
-<div align="center">
     <a href="https://viksanimation.my.id">
       <img src="https://img.shields.io/badge/Website-Visit_Demo-aqua?style=for-the-badge" alt="Github">
     </a>
