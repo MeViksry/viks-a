@@ -8,6 +8,7 @@
 [![Yarn](https://img.shields.io/badge/Yarn-2C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)](https://yarnpkg.com/)
 [![PostCSS](https://img.shields.io/badge/PostCSS-DD3A0A.svg?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Babel](https://img.shields.io/badge/Babel-F9DC3E.svg?style=for-the-badge&logo=babel&logoColor=black)](https://babeljs.io/)
 
   <h3>✨ Modern scroll-triggered animation library with inline configuration support & zero dependencies ✨</h3>
 </div>
