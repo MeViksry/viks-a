@@ -3,6 +3,7 @@
   <h1>VIKS ANIMATION JS</h1>
   
 [![npm version](https://img.shields.io/npm/v/package-name.svg)](https://www.npmjs.com/package/viks-animation)
+[![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)](https://webpack.js.org/)
 
 <p>
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
