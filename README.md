@@ -5,15 +5,7 @@
 [![npm](https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 [![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)](https://webpack.js.org/)
 [![Sass](https://img.shields.io/badge/Sass-CC6699.svg?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
-
-<p>
-    <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
-      <img src="https://img.shields.io/badge/LICENSE-MIT-black?style=flat-square" alt="License Badge">
-    </a>
-    <a href="https://www.npmjs.com/package/viks-animation" target="_blank">
-      <img src="https://img.shields.io/badge/DOWNLOAD-1K%2FMONTH-aqua?style=flat-square" alt="Downloads Badge">
-    </a>
-</p>
+[![Yarn](https://img.shields.io/badge/Yarn-2C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)](https://yarnpkg.com/)
 
   <h3>✨ Modern scroll-triggered animation library with inline configuration support & zero dependencies ✨</h3>
 </div>
