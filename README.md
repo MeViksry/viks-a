@@ -6,21 +6,13 @@
     <img src="https://img.shields.io/badge/JavaScript-Library-aqua?style=for-the-badge&logoColor=black" alt="JavaScript Library Badge"/>
   </p>
 
-  <p>
-    <img src="https://img.shields.io/npm/v/viks-animation?style=flat-square&color=aqua"/>
-    <img src="https://img.shields.io/npm/dm/viks-animation?style=flat-square&color=black"/>
-    <img src="https://img.shields.io/bundlephobia/minzip/viks-animation?style=flat-square&color=aqua"/>
-    <img src="https://img.shields.io/github/workflow/status/MeViksry/viks-animation/CI?style=flat-square&color=black"/>
-    <img src="https://img.shields.io/codecov/c/github/MeViksry/viks-animation?style=flat-square&color=aqua"/>
-  </p>
-
-  <p>
+  <div>
     <img src="https://img.shields.io/badge/Chrome-Latest-aqua?style=flat-square&logo=google-chrome&logoColor=white"/>
     <img src="https://img.shields.io/badge/Firefox-Latest-aqua?style=flat-square&logo=firefox&logoColor=white"/>
     <img src="https://img.shields.io/badge/Safari-Latest-aqua?style=flat-square&logo=safari&logoColor=white"/>
     <img src="https://img.shields.io/badge/Edge-Latest-aqua?style=flat-square&logo=microsoft-edge&logoColor=white"/>
     <img src="https://img.shields.io/badge/Opera-Latest-aqua?style=flat-square&logo=opera&logoColor=white"/>
-  </p>
+  </div>
 
 <p>
     <a href="https://github.com/MeViksry/viks-animation/blob/main/LICENSE" target="_blank">
@@ -49,55 +41,8 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 - **🎨 Rich Animation Library** - 30+ pre-built animations (fade, zoom, slide, flip)
 - **🎭 21 Easing Functions** - From linear to elastic, cubic-bezier mastery
 - **📱 Responsive & Smart** - Auto-detects devices, disable on mobile/tablet/phone
-- **🔍 SEO Friendly** - Uses CSS transforms for smooth, performant animations
 - **🛠️ Developer Friendly** - TypeScript support, comprehensive API, event callbacks
 - **🔧 Auto-Refresh** - MutationObserver support for dynamic content
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <h3>🎯 Core Features</h3>
-        <ul style="text-align: left;">
-          <li>✅ Scroll-Triggered Animations</li>
-          <li>✅ Inline Parameter Configuration</li>
-          <li>✅ 21 Easing Functions</li>
-          <li>✅ Device-Specific Controls</li>
-          <li>✅ Dynamic Content Support</li>
-          <li>✅ Custom Event System</li>
-          <li>✅ Anchor Placement (9 positions)</li>
-          <li>✅ Mirror Mode (scroll up/down)</li>
-        </ul>
-      </td>
-      <td align="center">
-        <h3>🛠️ Technical Highlights</h3>
-        <ul style="text-align: left;">
-          <li>🔹 Zero Dependencies</li>
-          <li>🔹 ~12KB gzipped</li>
-          <li>🔹 MutationObserver Support</li>
-          <li>🔹 Throttle & Debounce Built-in</li>
-          <li>🔹 TypeScript Ready</li>
-          <li>🔹 Tree-Shakeable</li>
-          <li>🔹 SSR Compatible</li>
-          <li>🔹 WCAG Compliant</li>
-        </ul>
-      </td>
-      <td align="center">
-        <h3>🎨 Animation Types</h3>
-        <ul style="text-align: left;">
-          <li>🎭 Fade (9 variants)</li>
-          <li>🎭 Zoom (10 variants)</li>
-          <li>🎭 Slide (4 directions)</li>
-          <li>🎭 Flip (4 directions)</li>
-          <li>🎭 Custom Animations</li>
-          <li>🎭 Stagger Support</li>
-          <li>🎭 Parallax Effects</li>
-          <li>🎭 Infinite Possibilities</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
-</div>
 
 <div align="center">
   <p>
@@ -469,17 +414,17 @@ Control precisely when animations trigger:
 **All 9 Anchor Positions:**
 ```
 ┌─────────────────┐
-│  top-bottom     │ ← Element top hits viewport bottom
-│  top-center     │ ← Element top hits viewport center
-│  top-top        │ ← Element top hits viewport top
+│  top-bottom        │ ← Element top hits viewport bottom
+│  top-center        │ ← Element top hits viewport center
+│  top-top           │ ← Element top hits viewport top
 │─────────────────│
-│  center-bottom  │ ← Element center hits viewport bottom
-│  center-center  │ ← Element center hits viewport center
-│  center-top     │ ← Element center hits viewport top
+│  center-bottom     │ ← Element center hits viewport bottom
+│  center-center     │ ← Element center hits viewport center
+│  center-top        │ ← Element center hits viewport top
 │─────────────────│
-│  bottom-bottom  │ ← Element bottom hits viewport bottom
-│  bottom-center  │ ← Element bottom hits viewport center
-│  bottom-top     │ ← Element bottom hits viewport top
+│  bottom-bottom     │ ← Element bottom hits viewport bottom
+│  bottom-center     │ ← Element bottom hits viewport center
+│  bottom-top        │ ← Element bottom hits viewport top
 └─────────────────┘
 ```
 
@@ -793,16 +738,7 @@ Control exactly when animations trigger with 9 anchor positions:
 
 ### Visual Guide
 
-```
-Viewport               Element
-┌────────────┐        ┌────────────┐
-│            │        │ top        │ ← top-bottom, top-center, top-top
-│            │        │            │
-│   CENTER   │   ←→   │ center     │ ← center-bottom, center-center, center-top
-│            │        │            │
-│            │        │ bottom     │ ← bottom-bottom, bottom-center, bottom-top
-└────────────┘        └────────────┘
-```
+<img src="Visual/AnchorPlacement.jpg"/>
 
 ### All Positions
 
