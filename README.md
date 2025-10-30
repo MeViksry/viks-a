@@ -1454,28 +1454,13 @@ SOFTWARE.
 ## 🌐 Links & Resources
 
 <div align="center">
-  <p>
-    <a href="https://viksanimation.my.id">
-      <img src="https://img.shields.io/badge/Website-Visit_Demo-aqua?style=for-the-badge" alt="Website">
-    </a>
-    <a href="https://viksanimation.my.id/docs">
-      <img src="https://img.shields.io/badge/Docs-Read_More-black?style=for-the-badge" alt="Documentation">
-    </a>
-    <a href="https://github.com/MeViksry/viks-animation">
-      <img src="https://img.shields.io/badge/GitHub-Source_Code-aqua?style=for-the-badge&logo=github" alt="GitHub">
-    </a>
-    <a href="https://www.npmjs.com/package/viks-animation">
-      <img src="https://img.shields.io/badge/NPM-Package-black?style=for-the-badge&logo=npm" alt="NPM">
-    </a>
-  </p>
-</div>
 
-- 🌐 **Official Website:** [viksanimation.my.id](https://viksanimation.my.id)
-- 📖 **Documentation:** [viksanimation.my.id/docs](https://viksanimation.my.id/docs)
-- 🐙 **GitHub:** [github.com/MeViksry/viks-animation](https://github.com/MeViksry/viks-animation)
-- 📦 **NPM:** [npmjs.com/package/viks-animation](https://www.npmjs.com/package/viks-animation)
-- 💬 **Discord:** [Join our community](https://discord.gg/viks-animation)
-- 🐦 **Twitter:** [@viksry](https://twitter.com/viksry)
+[![Website](https://img.shields.io/badge/Website-Visit_Demo-007ACC?style=for-the-badge&logo=googlechrome&logoColor=white)](https://viksanimation.my.id)
+[![Docs](https://img.shields.io/badge/Documentation-Read_More-28A745?style=for-the-badge&logo=gitbook&logoColor=white)](https://viksanimation.my.id/docs)
+[![GitHub](https://img.shields.io/badge/GitHub-Source_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MeViksry/viks-animation)
+[![NPM](https://img.shields.io/badge/NPM-Package-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/package/viks-animation)
+
+</div>
 
 <hr style="height: 3px; background: linear-gradient(90deg, rgba(0,0,0,0), aqua, rgba(0,0,0,0));">
 
