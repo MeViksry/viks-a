@@ -122,10 +122,10 @@ VIKS Animation is a cutting-edge, lightweight JavaScript animation library desig
 
 <div align="center">
 
-[![Fade](https://img.shields.io/badge/Fade-9_Variants-007ACC?style=flat-square)](#fade-animations)
-[![Flip](https://img.shields.io/badge/Flip-4_Directions-28A745?style=flat-square)](#flip-animations)
-[![Slide](https://img.shields.io/badge/Slide-4_Directions-6F42C1?style=flat-square)](#slide-animations)
-[![Zoom](https://img.shields.io/badge/Zoom-10_Variants-DC3545?style=flat-square)](#zoom-animations)
+[![Fade](https://img.shields.io/badge/Fade-9_Variants-007ACC?style=for-the-badge)](#fade-animations)
+[![Flip](https://img.shields.io/badge/Flip-4_Directions-28A745?style=for-the-badge)](#flip-animations)
+[![Slide](https://img.shields.io/badge/Slide-4_Directions-6F42C1?style=for-the-badge)](#slide-animations)
+[![Zoom](https://img.shields.io/badge/Zoom-10_Variants-DC3545?style=for-the-badge)](#zoom-animations)
 
 <h3>30+ Pre-built Animations Ready to Use</h3>
 
